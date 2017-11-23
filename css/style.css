@@ -1,0 +1,70 @@
+
+body {
+    background-color: #F5F5F5;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+body > header {
+	background-color: #696969;
+	color: white;
+
+	padding: 0.5em;
+	border-left: 1em;
+}
+
+body > header a {
+	color: white;
+	text-decoration: none;
+}
+
+.vertical-menu h2{
+    display: none;
+}
+
+.vertical-menu {
+	float: left;
+    width: 150px; /* Set a width if you like */
+    height: 100%;
+    background-color: #eee;
+	position: absolute;
+}
+
+.vertical-menu ul li {
+    list-style: none;
+    display: block;
+}
+
+.vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 20px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+    
+}
+
+.todo {
+	float: right;
+	align-content: right;
+   	width: 80%;
+   height: 200px;
+   line-height: 8px;
+}
+
+.todo > article{
+	background-color: #eee; 
+border-radius: 25px;
+    border: 2px solid #696969;
+    padding-left: 15px;
+    width: 90%;
+    height: 150px; 
+}
