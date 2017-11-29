@@ -5,16 +5,16 @@ body {
 }
 
 body > header {
-	background-color: #696969;
-	color: white;
+    background-color: #696969;
+    color: white;
 
-	padding: 0.5em;
-	border-left: 1em;
+    padding: 0.5em;
+    border-left: 1em;
 }
 
 body > header a {
-	color: white;
-	text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 .vertical-menu h2{
@@ -22,11 +22,11 @@ body > header a {
 }
 
 .vertical-menu {
-	float: left;
+    float: left;
     width: 150px; /* Set a width if you like */
     height: 100%;
     background-color: #eee;
-	position: absolute;
+    position: absolute;
 }
 
 .vertical-menu ul li {
@@ -53,18 +53,103 @@ body > header a {
 }
 
 .todo {
-	float: right;
-	align-content: right;
-   	width: 80%;
-   height: 200px;
-   line-height: 8px;
+    margin-top: 30px;
+    float: right;
+    align-content: right;
+    width: 80%;
+    height: 200px;
+    line-height: 8px;
 }
 
 .todo > article{
-	background-color: #eee; 
-border-radius: 25px;
+    background-color: #eee; 
+    border-radius: 25px;
     border: 2px solid #696969;
     padding-left: 15px;
     width: 90%;
     height: 150px; 
+    margin-top: 10px;
+}
+
+
+.todo .add a {
+    text-decoration:none;
+    color: white;
+}
+.todo .add {
+    width: 85%;
+    background-color: #555555;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    display: block;
+    
+}
+textarea {
+    width: 80%;
+    resize: none;
+    }
+
+
+
+input[type=text], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.todo div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.Buttons > ul {
+  top:400px;
+  list-style:none;
+  margin:0;
+  font-size:110%;
+  padding-top:600px;
+  padding-left:1000px;
+}
+
+.Buttons > ul > li a {
+    text-decoration:none;
+    color:white;
+}
+
+.Buttons > ul > li {
+    
+    width: 100px;
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;    
+    margin: 10px;
+    
 }

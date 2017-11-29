@@ -47,6 +47,11 @@
   </div>
 
   <div class="todo">
+
+      <div class ="add">
+    <a href="addTodo.php">Add To Do</a>
+  </div>
+  
     <article>
       <h2>Homework</h2>
       <p class="description">Computer network class</p>
