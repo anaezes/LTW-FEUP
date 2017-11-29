@@ -1,3 +1,16 @@
+<?php
+	include_once('includes/init.php');
+
+
+	if(!(isset($_SESSION['username']) && $_SESSION != ''))
+	{
+		header('location:login.php');
+	}
+	else
+	{
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -16,6 +29,7 @@
     <div id="info">
       <!--img src="images/site/logo.svg"-->
       <h1><a href="index.php">ToDo List</a></h1>
+	  <h2><a href="action_logout.php">Log Out</a></h2>
     </div>
   </header>
 
@@ -76,3 +90,8 @@
 
 </body>
 </html>
+
+
+<?php
+	}
+?>
