@@ -1,8 +1,7 @@
 <?php
 
 	include_once('database/connection.php');
-	session_start();
-
+	
 	$username = 'qwerty';
 	// $password = '7110eda4d09';
 	

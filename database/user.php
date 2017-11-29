@@ -21,4 +21,9 @@
 		return $stmt->fetch() !== false;
 	}
 	
+	function updateUser($username, $password, $name, $photo)
+	{
+		
+	}
+	
 ?>

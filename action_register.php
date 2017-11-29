@@ -7,10 +7,10 @@
 	$name = $_POST['name'];
 	$photo = $_POST['photo'];
 	
+	
 	if(createUser($username, $password, $name, $photo))
 	{
-		header('location:login.php');
-		exit();
+		
 	}
 	
 	header('location:login.php');
