@@ -3,13 +3,14 @@
 	include_once('database/connection.php');
 	session_start();
 
-	$username = 'johnSnow';
-	$password = '7110eda4d09';
+	$username = 'qwerty';
+	// $password = '7110eda4d09';
 	
 	global $dbh;
-	$stmt = $dbh->prepare('SELECT * FROM user WHERE usr_username = ? AND usr_password = ?');
-	$stmt->execute(array($username, $password));
-	$r = $stmt->fetch();
+	$stmt = $dbh->prepare('SELECT * FROM user');
+	//$stmt->execute(array($username, $password));
+	$stmt->execute(array());
+	$r = $stmt->fetchAll();
 	
 	print_r($r);
 

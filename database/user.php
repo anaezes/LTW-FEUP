@@ -8,4 +8,17 @@
 		return $stmt->fetch() !== false;
 	}
 	
+	function createUser($username, $password, $name, $photo)
+	{
+		global $dbh;
+		$stmt = $dbh->prepare('INSERT INTO user VALUES(:user, :pass, :name, :photo)');
+		$stmt->execute([
+			':user' => $username,
+			':pass' => $password,
+			':name' => $name,
+			':photo' => $photo,
+		]);
+		return $stmt->fetch() !== false;
+	}
+	
 ?>

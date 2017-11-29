@@ -20,16 +20,25 @@
 		<div id="title">
 			<h2>Todo List</h2>
 			<div id="container">
-				<form action="action_login.php" method="POST">
+				<form action="action_register.php" method="POST">
 
 					<label for="iuser"> Username: </label>
 					<input type="text" id="iuser" name="username"/>
-
+					<br>
+					<br>
+			
+					<label for="ipass"> Password: </label>
+					<input type="password" id="ipass" name="password"/>
 					<br>
 					<br>
 					
-					<label for="ipass"> Password: </label>
-					<input type="password" id="ipass" name="password"/>
+					<label for="iname"> Name: </label>
+					<input type="text" id="iname" name="name"/>
+					<br>
+					<br>
+			
+					<label for="iphoto"> Photo: </label>
+					<input type="text" id="iphoto" name="photo"/>
 					
 					<br>
 					<br>
@@ -46,6 +55,7 @@
 	</body>
 
 </html>
+
 
 <?php
 	}
