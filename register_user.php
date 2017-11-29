@@ -1,62 +1,73 @@
 <?php
-	include_once('includes/init.php');
-	
-	if(isset($_SESSION['username']) && $_SESSION != '')
-	{
-		header('location:index.php');
-	}
-	else
-	{
-?>
+include_once('includes/init.php');
 
-<!DOCTYPE html>
-<html>
+if(isset($_SESSION['username']) && $_SESSION != '')
+{
+	header('location:index.php');
+}
+else
+{
+	?>
+
+	<!DOCTYPE html>
+	<html>
 	<head>
-		<link rel="stylesheet">
+		<title>ToDo List</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Cherry+Swash" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body>
-	
-		<div id="title">
-			<h2>Todo List</h2>
-			<div id="container">
-				<form action="action_register.php" method="POST">
+		<img src="images/background1.jpg" id="bg" alt="">
+		<div id="register">
+			<form class="form-1">
 
-					<label for="iuser"> Username: </label>
-					<input type="text" id="iuser" name="username"/>
-					<br>
-					<br>
-			
-					<label for="ipass"> Password: </label>
-					<input type="password" id="ipass" name="password"/>
-					<br>
-					<br>
+				<form action="action_register.php" method="POST">
+					<p class="field">
+						<label for="iuser"> Username: </label>
+						<input type="text" id="iuser" name="username"/>
+						<br>
+						<br>
+					</p>
+					<p class="field">
+						<label for="ipass"> Password: </label>
+						<input type="password" id="ipass" name="password"/>
+						<br>
+						<br>
+					</p>
+					<p class="field">
+						<label for="iname"> Name: </label>
+						<input type="text" id="iname" name="name"/>
+						<br>
+						<br>
+					</p>
+					<p class="field">
+						<label for="iphoto"> Photo: </label>
+						<input type="text" id="iphoto" name="photo"/>
+						<br>
+						<br>
+					</p>
 					
-					<label for="iname"> Name: </label>
-					<input type="text" id="iname" name="name"/>
-					<br>
-					<br>
-			
-					<label for="iphoto"> Photo: </label>
-					<input type="text" id="iphoto" name="photo"/>
-					
-					<br>
-					<br>
-					
-					<div id="lower">
-						<input type = "submit" value="Entrar"/>
-						<input type = "reset" value="Limpar"/>
+					<div class="regBottons">
+						<ul>
+							<input type = "reset" value="Clear"/>
+							<input type = "submit" value="Register"/>
+						</ul>
 						<!--<a id="reg" href="registar.php">REGISTAR</a>-->
 					</div>
+				</div>
 
-				</form>
-			</div>
-		</div>
-	</body>
+			</form>
+		</form>
+	</div>
+</body>
 
 </html>
 
 
 <?php
-	}
+}
 ?>
