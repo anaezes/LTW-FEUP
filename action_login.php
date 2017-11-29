@@ -8,10 +8,6 @@
 	{
 		setCurrentUser($_POST['username']);
 	}
-	else
-	{
-		echo 'Dados Errados!';
-	}
 	
 	header('location:index.php');
 	exit();
