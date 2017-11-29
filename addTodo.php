@@ -55,7 +55,7 @@ At w3schools.com you will learn how to make a website. We offer free tutorials i
 	  <option value="other">Other</option>
     </select>
   
-    <input type="submit" value="Submit" href="index.php">
+    <!--input type="submit" value="Submit" href="index.php"--> 
   </form>
 </div>
 

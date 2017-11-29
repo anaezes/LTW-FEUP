@@ -61,6 +61,12 @@ body > header a {
     line-height: 8px;
 }
 
+.todo div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
 .todo > article{
     background-color: #eee; 
     border-radius: 25px;
@@ -84,15 +90,12 @@ body > header a {
     text-align: center;
     display: inline-block;
     font-size: 16px;
-    display: block;
-    
+    display: block;  
 }
 textarea {
     width: 80%;
     resize: none;
     }
-
-
 
 input[type=text], select {
     width: 80%;
@@ -104,6 +107,7 @@ input[type=text], select {
     box-sizing: border-box;
 }
 
+/*botton submit*/
 input[type=submit] {
     width: 80%;
     background-color: #4CAF50;
@@ -119,19 +123,12 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-.todo div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
 .Buttons > ul {
-  top:400px;
   list-style:none;
   margin:0;
   font-size:110%;
-  padding-top:600px;
-  padding-left:1000px;
+  padding-top:200px;
+  padding-left:700px;
 }
 
 .Buttons > ul > li a {
@@ -140,6 +137,37 @@ input[type=submit]:hover {
 }
 
 .Buttons > ul > li {
+    display: inline-block;
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+    
+}
+
+.Buttons > ul > li:hover{
+ background-color: #45a049;   
+}
+
+.startButtons > ul {
+  top:400px;
+  list-style:none;
+  margin:0;
+  font-size:110%;
+  padding-top:350px;
+  padding-left:35%;
+}
+
+.startButtons > ul > li a {
+    text-decoration:none;
+    color:white;
+}
+
+.startButtons > ul > li {
     
     width: 100px;
     background-color: #555555;
@@ -150,6 +178,6 @@ input[type=submit]:hover {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;    
-    margin: 10px;
+    margin: 30px;
     
 }
