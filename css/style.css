@@ -226,7 +226,7 @@ input[type=text], input[type=password], select {
     text-align: center;
 }
 
-.form-1::before, .formtodo::before{
+.form-1::before, .addtodo::before{
  position: absolute;
     top: 0;
     left: 0;
@@ -236,7 +236,7 @@ input[type=text], input[type=password], select {
     z-index: -1;
 }
 
-.form-1, .formtodo{
+.form-1, .addtodo{
     /* Size & position */
     width: 450px;
     margin: 8% auto 30px;
@@ -255,7 +255,7 @@ input[type=text], input[type=password], select {
     background-color: rgba(109, 109, 109, 0.8);
 }
 
-.form-1 .field, .formtodo .field {
+.form-1 .field, .addtodo .field {
     position: center; 
     width: 550px;
 }
@@ -323,9 +323,6 @@ label[for="dateofactivity"] {
 color: black;
 }
 
-.addtodo {
-    margin-right: 300px;
-}
 
 
 /*page login */

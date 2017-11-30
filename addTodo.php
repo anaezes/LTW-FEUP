@@ -14,8 +14,8 @@
 
   <header>
     <div id="info">
-      <img src="images/logo2_s.png">
-            <a href="action_logout.php">Log Out</a>
+      <!--img src="images/site/logo.svg"-->
+      <h1><a href="index.php">ToDo List</a></h1>
     </div>
   </header>
 
@@ -35,12 +35,12 @@
 <div class="todo">
 
     <div class="addtodo">
-      <form class="formtodo">
 
-        <form action="action_register.php" method="POST">
+
+        <form action="action_addTodo.php" method="POST">
         <p class="field">
             <label for="title"> Title: </label>
-            <input type="text" id="Title" name="title"/>
+            <input type="text" id="title" name="title"/>
             <br>
             <br>
         </p>
@@ -59,7 +59,7 @@
 
        <label for="description">Description</label>
         <p class="field">
-          <textarea id="description" rows="4" cols="50">
+          <textarea name="description" id="description" rows="4" cols="50">
           </textarea>
         </p>
 
@@ -72,12 +72,12 @@
               <input type = "submit" value="Add"/>
               <input type = "reset" value="Cancel"/>
             </ul>
-            <!--<a id="reg" href="registar.php">REGISTAR</a>-->
+
           </div>
 
 
       </form>
-    </form>
+
   </div>
 	
 </div>
