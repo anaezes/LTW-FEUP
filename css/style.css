@@ -1,20 +1,18 @@
 
 body {
-    background-color: #555555;
+    background-color:   #F8F8FF;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     
 
 }
 
 body > header {
-    background-color: #696969;
-    color: white;
+    background-color:   #F8F8FF;
     padding: 0.5em;
-    border-left: 1em;
+    
 }
 
 body > header a {
-    color: white;
     text-decoration: none;
 }
 
@@ -24,10 +22,14 @@ body > header a {
 
 .vertical-menu {
     float: left;
-    width: 150px; /* Set a width if you like */
+    width: 200px; 
     height: 100%;
     background-color: #eee;
     position: absolute;
+}
+
+.vertical-menu ul{
+   text-align: center;
 }
 
 .vertical-menu ul li {
@@ -41,6 +43,7 @@ body > header a {
     display: block; /* Make the links appear below each other */
     padding: 20px; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
+    text-align: center;
 }
 
 .vertical-menu a:hover {
@@ -197,6 +200,8 @@ input[type=text], input[type=password], select {
     font-size: 16px;    
     margin: 30px;
     border-radius: 8px;  
+    box-shadow: 10px 10px 5px #555555;
+
 }
 
 .startButtons > ul > li:hover{ 
@@ -207,7 +212,7 @@ input[type=text], input[type=password], select {
 #bg {
   width:100%;
   position: fixed; 
-  padding-top: 5%;
+  padding-top: 2.5%;
   top: 0; 
   left: 0; 
   opacity: 0.75;
@@ -216,11 +221,6 @@ input[type=text], input[type=password], select {
 
 
 /*page register */
-
-.box {
-background: white;
-width: 450px;
-}
 
 .register{ 
     text-align: center;
@@ -232,8 +232,6 @@ width: 450px;
     left: 0;
     bottom: 0;
     right: 0;
-    background: #555555;
-    opacity: 0.8;
     content: "";
     z-index: -1;
 }
@@ -251,12 +249,10 @@ width: 450px;
     box-shadow: 
         0 0 1px rgba(0, 0, 0, 0.3), 
         0 3px 7px rgba(0, 0, 0, 0.3), 
-        inset 0 1px rgba(255,255,255,1),
+        inset 0 1px rgba(0,0,0,0.3),
         inset 0 -3px 2px rgba(0,0,0,0.25);
     border-radius: 5px;
-    background-color: rgba(54, 25, 25, 0.00004);
-
-
+    background-color: rgba(109, 109, 109, 0.8);
 }
 
 .form-1 .field, .formtodo .field {
@@ -272,6 +268,7 @@ width: 450px;
     margin-right: 20px;
     border: none;
     border-radius: 4px;
+    box-shadow: 10px 10px 5px #555555;
     cursor: pointer;
     font-size: 16px;  
 }
