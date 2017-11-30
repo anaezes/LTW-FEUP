@@ -1,6 +1,6 @@
 
 body {
-    background-color:   #D3D3D3;
+    background-color: #555555;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     
 
@@ -187,7 +187,7 @@ input[type=text], input[type=password], select {
 
 .startButtons > ul > li { 
     width: 100px;
-    background-color: #555555;
+    background-color: #45a049;  
     border: none;
     color: white;
     padding: 15px 32px;
@@ -200,7 +200,7 @@ input[type=text], input[type=password], select {
 }
 
 .startButtons > ul > li:hover{ 
-   background-color: #45a049;  
+   background-color: #555555;
 }
 
 /*image background */
@@ -216,22 +216,35 @@ input[type=text], input[type=password], select {
 
 
 /*page register */
-.register{ 
-    text-align: center;
-background: rgb(255, 255, 255); 
-background: rgba(54, 25, 25, .5); 
 
+.box {
+background: white;
+width: 450px;
 }
 
+.register{ 
+    text-align: center;
+}
 
+.form-1::before{
+ position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #555555;
+    opacity: 0.8;
+    content: "";
+    z-index: -1;
+}
 
-.form-1 {
+.form-1{
     /* Size & position */
     width: 450px;
     margin: 8% auto 30px;
     padding: 10px;
     position: relative; /* For the submit button positioning */
-    color: #303030;
+    color: white;
     font-weight: bold;
 
     /* Styles */
@@ -274,9 +287,26 @@ background: rgba(54, 25, 25, .5);
     position: center; 
 }
 
-.regBottons {
+.regBottons input[type=file] {
   display: block;
+  position:relative;
+    display:inline-block;    
+    border-radius:8px;
+    border:#ebebeb solid 1px;
+    width:250px; 
+    padding: 4px 6px 4px 8px;
+    font: normal 16px Myriad Pro, Verdana, Geneva, sans-serif;
+    color: #7f7f7f;
+    margin-top: 2px;
+    background:white;
+    -webkit-appearance:none; 
+    position:absolute;
+    top:0; left:0;
+    opacity:0;
 }
+
+
+
 
 
 /*page login */

@@ -45,8 +45,8 @@ else
 						<br>
 					</p>
 					<p class="field">
-						<label for="iphoto"> Photo: </label>
-						<input type="text" id="iphoto" name="photo"/>
+						<label for="iphoto"> Choose Photo: </label>
+						<input type="file" id="iphoto" name="photo"/>
 						<br>
 						<br>
 					</p>
