@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <img src="images/background1.jpg" id="bg" alt="">
+  <img src="images/background2.jpg" id="bg" alt="">
   <div class = 'init'>
 	<div class ="startButtons">
 		  <ul>

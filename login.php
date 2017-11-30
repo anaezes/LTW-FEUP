@@ -21,7 +21,7 @@ else
 	</head>
 
 	<body>
-		<img src="images/background1.jpg" id="bg" alt="">
+		<img src="images/background2.jpg" id="bg" alt="">
 		<div id="login">
 			<form class="form-1">
 				<form action="action_login.php" method="POST">
