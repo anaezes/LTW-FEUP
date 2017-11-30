@@ -226,7 +226,7 @@ width: 450px;
     text-align: center;
 }
 
-.form-1::before{
+.form-1::before, .formtodo::before{
  position: absolute;
     top: 0;
     left: 0;
@@ -238,7 +238,7 @@ width: 450px;
     z-index: -1;
 }
 
-.form-1{
+.form-1, .formtodo{
     /* Size & position */
     width: 450px;
     margin: 8% auto 30px;
@@ -259,7 +259,7 @@ width: 450px;
 
 }
 
-.form-1 .field {
+.form-1 .field, .formtodo .field {
     position: center; 
     width: 550px;
 }
@@ -307,6 +307,28 @@ width: 450px;
 
 
 
+/*page Add to Do*/
+
+
+label[for="title"] {
+color: black;
+}
+
+label[for="description"] {
+color: black;
+}
+
+label[for="category"] {
+color: black;
+}
+
+label[for="dateofactivity"] {
+color: black;
+}
+
+.addtodo {
+    margin-right: 300px;
+}
 
 
 /*page login */

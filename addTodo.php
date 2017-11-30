@@ -34,37 +34,51 @@
 
 <div class="todo">
 
-<div>
-  <form action="index.php">
-    <label for="title">Title</label>
-    <input type="text" id="title" name="title" placeholder="Title...">
+    <div class="addtodo">
+      <form class="formtodo">
 
-    <label for="description">Description</label>
-	<textarea id="description" rows="4" cols="50">
-At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. 
-</textarea>
+        <form action="action_register.php" method="POST">
+        <p class="field">
+            <label for="title"> Title: </label>
+            <input type="text" id="Title" name="title"/>
+            <br>
+            <br>
+        </p>
+        <p class="field">
+          <label for="category">Category</label>
+          <select id="category" name="category">
+           <option value="home">Home</option>
+           <option value="work">Work</option>
+           <option value="finances">Finances</option>
+           <option value="sport">Sport</option>
+           <option value="leisure">Leisure</option>
+           <option value="beauty">Beauty</option>
+            <option value="other">Other</option>
+          </select>
+        </p>
 
-    <label for="category">Category</label>
-    <select id="category" name="category">
-      <option value="home">Home</option>
-      <option value="work">Work</option>
-      <option value="finances">Finances</option>
-	  <option value="sport">Sport</option>
-	  <option value="leisure">Leisure</option>
-	  <option value="beauty">Beauty</option>
-	  <option value="other">Other</option>
-    </select>
-  
-    <!--input type="submit" value="Submit" href="index.php"--> 
-  </form>
-</div>
+       <label for="description">Description</label>
+        <p class="field">
+          <textarea id="description" rows="4" cols="50">
+          </textarea>
+        </p>
 
-	<div class ="Buttons">
-		  <ul>
-          <li><a href="index.php">Save</a></li>
-          <li><a href="index.php">Return</a></li>
-        </ul>
-	</div>
+          <label for="dateofactivity">Date Of Activity</label>
+          <input type="date" name="dateofactivity" id="dateofactivity"/>
+
+          
+          <div class="regBottons">
+            <ul>
+              <input type = "submit" value="Add"/>
+              <input type = "reset" value="Cancel"/>
+            </ul>
+            <!--<a id="reg" href="registar.php">REGISTAR</a>-->
+          </div>
+
+
+      </form>
+    </form>
+  </div>
 	
 </div>
   <footer>
