@@ -27,9 +27,8 @@
 
   <header>
     <div id="info">
-      <!--img src="images/site/logo.svg"-->
-      <h1><a href="index.php">ToDo List</a></h1>
-	  <h2><a href="action_logout.php">Log Out</a></h2>
+      <img src="images/logo2_s.png">
+      <a href="action_logout.php">Log Out</a>
     </div>
   </header>
 
