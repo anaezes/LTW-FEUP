@@ -14,14 +14,19 @@
 
   <header>
     <div id="info">
-      <!--img src="images/site/logo.svg"-->
-      <h1><a href="index.php">ToDo List</a></h1>
+      <img src="images/logo2_s.png">
+    </div>
+    <div class="logout">
+      <a href="action_logout.php">Log Out</a>
     </div>
   </header>
+
+
 
   <div class="vertical-menu">
     <h2>Categories</h2>
     <ul>
+      <li><a href="?cat_id=add">&#8853</a></li>
       <li><a href="?cat_id=1">Home</a></li>
       <li><a href="?cat_id=2">Work</a></li>
       <li><a href="?cat_id=3">Finances</a></li>
@@ -39,7 +44,7 @@
 
         <form action="action_addTodo.php" method="POST">
         <p class="field">
-            <label for="title"> Title: </label>
+            <label for="title"> Title </label>
             <input type="text" id="title" name="title"/>
             <br>
             <br>
@@ -59,7 +64,7 @@
 
        <label for="description">Description</label>
         <p class="field">
-          <textarea name="description" id="description" rows="4" cols="50">
+          <textarea name="description" id="description" >
           </textarea>
         </p>
 
@@ -67,7 +72,7 @@
           <input type="date" name="dateofactivity" id="dateofactivity"/>
 
           
-          <div class="regBottons">
+          <div class="addToDoBottons">
             <ul>
               <input type = "submit" value="Add"/>
               <input type = "reset" value="Cancel"/>
