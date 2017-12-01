@@ -31,8 +31,8 @@
 	}
 	
 	
-	updatePassUser($username, $password);
-	update($username, $name, $photo);
+	//updatePassUser($username, $password);
+	//update($username, $name, $photo);
 	cena();
 	
 ?>

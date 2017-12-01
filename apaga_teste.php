@@ -1,7 +1,7 @@
 <?php
 	include_once('database/connection.php');
 	
-	$user = '';
+	$user = 'p';
 	
 	
 	global $dbh;

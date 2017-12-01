@@ -8,9 +8,9 @@
 	$photo = $_POST['photo'];
 	
 	
-	if(createUser($username, $password, $name, $photo))
+	if(!createUser($username, $password, $name, $photo))
 	{
-		
+		//Neste momento não faz nada dentro do if
 	}
 	
 	header('location:login.php');

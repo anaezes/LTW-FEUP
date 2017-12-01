@@ -1,10 +1,11 @@
+
 <?php
 	include_once('includes/init.php');
 
 
 	if(!(isset($_SESSION['username']) && $_SESSION != ''))
 	{
-		header('location:login.php');
+		header('location:page.php');
 	}
 	else
 	{
@@ -27,15 +28,17 @@
 
   <header>
     <div id="info">
-      <!--img src="images/site/logo.svg"-->
-      <h1><a href="index.php">ToDo List</a></h1>
-	  <h2><a href="action_logout.php">Log Out</a></h2>
+      <img src="images/logo2_s.png">
+    </div>
+    <div class="logout">
+      <a href="action_logout.php">Log Out</a>
     </div>
   </header>
 
   <div class="vertical-menu">
     <h2>Categories</h2>
     <ul>
+      <li><a href="?cat_id=add">&#8853</a></li>
       <li><a href="?cat_id=1">Home</a></li>
       <li><a href="?cat_id=2">Work</a></li>
       <li><a href="?cat_id=3">Finances</a></li>
@@ -47,6 +50,11 @@
   </div>
 
   <div class="todo">
+
+      <div class ="add">
+    <a href="addTodo.php">Add To Do</a>
+  </div>
+  
     <article>
       <h2>Homework</h2>
       <p class="description">Computer network class</p>
