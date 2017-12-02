@@ -5,13 +5,34 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	$name = $_POST['name'];
-	$photo = $_POST['photo'];
 	
+	$file_name = $_FILES['photo']['name'];
+	$file_type = $_FILES['photo']['type'];
+	$file_size = $_FILES['photo']['size'];
+	$file_tmp = $_FILES['photo']['tmp_name'];
+	$final_dest = 'img/' . $username . '.png';
 	
-	if(!createUser($username, $password, $name, $photo))
+	if(!($username == '' || $password == '' || $name == '' || $file_name == ''))
 	{
-		//Neste momento não faz nada dentro do if
+		if(!createUser($username, $password, $name))
+		{
+			//Neste momento não faz nada dentro do if
+		}
+		if($file_size < 500000 && $file_type == 'image/png')
+		{
+			move_uploaded_file($file_tmp, $final_dest);			
+		}
+		else
+		{
+			echo 'File is bigger than 500kb or is not in jpeg or png format';
+		}		
 	}
+	else
+	{
+		header('location:register_user.php');
+		exit();
+	}
+	
 	
 	header('location:login.php');
 	exit();

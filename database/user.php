@@ -8,7 +8,16 @@
 		return $stmt->fetch() !== false;
 	}
 	
-	function createUser($username, $password, $name, $photo)
+	function getUserData($username)
+	{
+		global $dbh;
+		$stmt = $dbh->prepare('SELECT * FROM user WHERE usr_username = ?');
+		$stmt->execute(array($username));
+		$data = $stmt->fetchAll();
+		return $data;
+	}
+	
+	function createUser($username, $password, $name)
 	{
 		global $dbh;
 		$stmt = $dbh->prepare('INSERT INTO user VALUES(:user, :pass, :name, :photo)');
@@ -16,19 +25,19 @@
 			':user' => $username,
 			':pass' => $password,
 			':name' => $name,
-			':photo' => $photo,
+			':photo' => 'photo',
 		]);
 		return $stmt->fetch() !== false;
 	}
 	
-	function updateUser($username, $name, $photo)
+	function updateUser($username, $name)
 	{
 		global $dbh;
 		$stmt = $dbh->prepare('UPDATE user SET usr_name = :name, usr_photo = :photo WHERE usr_username = :user');
 		$stmt->execute([
 			':user' => $username,
 			':name' => $name,
-			':photo' => $photo,
+			':photo' => $username,
 		]);
 		return $stmt->fetch() !== false;
 	}

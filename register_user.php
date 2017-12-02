@@ -1,7 +1,7 @@
 <?php
 include_once('includes/init.php');
 
-if(isset($_SESSION['username']) && $_SESSION != '')
+if(isset($_SESSION['username']))
 {
 	header('location:index.php');
 }
@@ -25,7 +25,7 @@ else
 		<div id="register">
 			<div class="form-1">
 
-				<form action="action_register.php" method="POST">
+				<form action="action_register.php" method="POST" enctype="multipart/form-data">
 					<p class="field">
 						<label for="iuser"> Username: </label>
 						<input type="text" id="iuser" name="username"/>

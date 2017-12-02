@@ -2,9 +2,9 @@
 function getListToDos($username)
 {
 	global $dbh;
-	echo("<script>console.log('PHP: ".$username."');</script>");
+	//echo("<script>console.log('PHP: ".$username."');</script>");
 
-	echo($username);
+	//echo($username);
 	$stmt = $dbh->prepare("SELECT * FROM todo 
 		WHERE usr_username LIKE '%$username%'
 		GROUP BY td_name");
