@@ -24,4 +24,7 @@
 	  <br>
       <a href="action_logout.php">Log Out</a>
     </div>
+    <div class="editProfile">
+      <a href="edit_profile.php">Edit Profile</a>
+    </div>
   </header>
