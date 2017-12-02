@@ -6,7 +6,7 @@ include_once('database/to_dos.php');
 include_once('templates/common/header.php');
 
 $categories = getAllCategories();
-$todos = getListToDos();
+$todos = getListToDos($_SESSION['username']);
 
 include_once('templates/category/list_categories.php');
 include_once('templates/todo/list_todos.php');
