@@ -14,17 +14,18 @@
 	
 	if(!($username == '' || $password == '' || $name == '' || $file_name == ''))
 	{
-		if(!createUser($username, $password, $name))
-		{
-			//Neste momento não faz nada dentro do if
-		}
 		if($file_size < 500000 && $file_type == 'image/png')
 		{
-			move_uploaded_file($file_tmp, $final_dest);			
+			move_uploaded_file($file_tmp, $final_dest);
+			if(!createUser($username, $password, $name))
+			{
+				//Neste momento não faz nada dentro do if
+			}
 		}
 		else
 		{
-			echo 'File is bigger than 500kb or is not in jpeg or png format';
+			header('location:register_user.php');
+			exit();
 		}		
 	}
 	else
@@ -33,7 +34,12 @@
 		exit();
 	}
 	
-	
-	header('location:login.php');
+	if(isLoginCorrect($_POST['username'], $_POST['password']))
+	{
+		setCurrentUser($_POST['username']);
+		$data = getUserData($_POST['username']);
+		$_SESSION['usr_name'] = $data[0]['usr_name'];
+	}
+	header('location:index.php');
 	exit();
 ?>
