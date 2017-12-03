@@ -1,7 +1,7 @@
 <?php
 function getAllCategories($username) {
   global $dbh;
-  $stmt = $dbh->prepare("SELECT category.cat_name FROM category, user_cat WHERE usr LIKE :username
+  $stmt = $dbh->prepare("SELECT category.cat_name, category.cat_color FROM category, user_cat WHERE usr LIKE :username
     AND cat_name LIKE user_cat.cat
     GROUP BY cat_name");
   $stmt->execute([

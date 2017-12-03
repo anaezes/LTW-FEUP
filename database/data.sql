@@ -1,5 +1,6 @@
 CREATE TABLE category (
-  cat_name VARCHAR PRIMARY KEY
+  cat_name VARCHAR PRIMARY KEY,
+  cat_color VARCHAR 
 );
 
 
@@ -26,13 +27,13 @@ CREATE TABLE user_cat (
 );
 
 
-INSERT INTO category VALUES ('Home');
-INSERT INTO category VALUES ('Work');
-INSERT INTO category VALUES ('Finances');
-INSERT INTO category VALUES ('Sport');
-INSERT INTO category VALUES ('Leisure');
-INSERT INTO category VALUES ('Beauty');
-INSERT INTO category VALUES ('Other');
+INSERT INTO category VALUES ('Home', '#000080');--blue 
+INSERT INTO category VALUES ('Work', '#800000'); --brown 
+INSERT INTO category VALUES ('Finances', '#DAA520'); -- dark yellow 
+INSERT INTO category VALUES ('Sport', '#45a049'); --green 
+INSERT INTO category VALUES ('Leisure', '#D2691E'); -- dark orange
+INSERT INTO category VALUES ('Beauty', '#800080'); --purple
+INSERT INTO category VALUES ('Other', '#696969'); --grey 
 
 INSERT INTO user VALUES('johnSnow', '7110eda4d09', 'Kit Harrigton');
 INSERT INTO user VALUES('annaXpto','7110e062aa5', 'Anne Shirly');
