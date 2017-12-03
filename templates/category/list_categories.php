@@ -36,15 +36,21 @@
 
 </div>
 
-
-
 </li>
 
- 
-  	
+    <?php foreach ($categories as $category) { 
+      $cat_color = $category['cat_color'];
+      $cat_name = $category['cat_name'];
+      ?>
 
-    <?php foreach ($categories as $category) { ?>
-      <li><a href="?cat_id=<?=$category['cat_id']?>"><?=$category['cat_name']?></a></li>
+      <li>
+        <a href="?cat_name=<?=$cat_name?>"
+    onmouseover='this.style.background="<?php echo $cat_color?>",
+    this.style.color="white" ' 
+    onmouseout='this.style.background="#F8F8FF",
+    this.style.color="#696969" '>
+        <?=$cat_name?> </a>
+    </li>
     <?php } ?>
   </ul>
 </div>
