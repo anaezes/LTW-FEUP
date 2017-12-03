@@ -39,7 +39,14 @@
 		setCurrentUser($_POST['username']);
 		$data = getUserData($_POST['username']);
 		$_SESSION['usr_name'] = $data[0]['usr_name'];
+		if(addFirstCategories($username)){
+			header('location:register_user.php');
+			exit();
+		}
+
 	}
+
 	header('location:index.php');
 	exit();
+		
 ?>

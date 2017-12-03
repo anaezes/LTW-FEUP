@@ -9,7 +9,7 @@
       <h2><?=$todo['td_name']?></h2>
       <p class="description"><?=$todo['td_description']?></p>
       <p class="date"><?=$todo['td_date']?></p>
-      <p class="categorie"><?=$todo['cat_id']?></p>
+      <p class="categorie"><?=$todo['cat_name']?></p>
       <p class="user"><?=$todo['usr_username']?></p>
     </article>
     <?php 
