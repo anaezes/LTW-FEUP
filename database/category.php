@@ -11,12 +11,13 @@ function getAllCategories($username) {
   return $stmt->fetchAll();
 }
 
-function addCategory($username, $category) {
+function addCategory($username, $category, $color) {
 
   global $dbh;
-  $stmt = $dbh->prepare('INSERT INTO category VALUES(:category)');
+  $stmt = $dbh->prepare('INSERT INTO category VALUES(:category, :color)');
   $stmt->execute([
-    ':category' => $category, 
+    ':category' => $category,
+     ':color' => $color, 
   ]);
 
   $stmt = $dbh->prepare('INSERT INTO user_cat VALUES(:category, :username)');

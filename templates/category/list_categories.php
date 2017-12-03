@@ -22,6 +22,7 @@
 					<p class="field">
 						<label for="category"> Nova Categoria: </label>
 						<input type="text" id="NewCat" name="NewCategory"/>
+            <input name="Color" type="color"/>
 						<br>
 					</p>				
 					<div class="regBottons">
