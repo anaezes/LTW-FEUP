@@ -14,8 +14,9 @@ body > header {
 
 .lateral .user{
     text-align: left;
-    margin-top: 50px;
-    margin-left: 20px;
+    margin: 20px 0px 0px 20px ;
+    padding-top: 25px;
+    border-top: 2px solid #696969;
 }
 
 .lateral .user > table{
@@ -30,7 +31,7 @@ body > header {
 .logout a {
     text-decoration: none;
     color: #696969;
-        font-weight: bold;
+    font-weight: bold;
     font-size: 16px;
 }
 
@@ -45,8 +46,7 @@ body > header {
     height: 100%;
     background-color: #F8F8FF;
     position: absolute;
-    border-right: 2px solid #696969;
-    padding-right: 50px;
+    
     margin-top: 2px;
 
 }
@@ -54,6 +54,8 @@ body > header {
 .categories ul{
    text-align: center;
     align-content: left;
+    padding-left: 40px;
+
 }
 
 .categories ul li {
