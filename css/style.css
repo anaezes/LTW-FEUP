@@ -12,8 +12,19 @@ body > header {
 }
 
 
-.logout{
-    text-align: right;
+.lateral .user{
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.lateral .user > table{
+    border-top: 1px;
+}
+
+.lateral .user a{
+    text-decoration: none;
+    color: #696969;
 }
 
 .logout a {
@@ -28,7 +39,7 @@ body > header {
 
 }
 
-.categories {
+.lateral {
     align-content: left;
     width: 200px; 
     height: 100%;
@@ -76,7 +87,7 @@ body > header {
 
 .todo {
     position: absolute;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-left: 300px;
     float: right;
     width: 80%;

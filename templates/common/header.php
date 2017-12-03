@@ -17,14 +17,4 @@
     <div id="info">
       <img src="images/logo2_s.png">
     </div>
-    <div class="logout">
-	  <?php
-		echo '<h4>'.$_SESSION['usr_name'].'</h4>'.'<img src="img/'.$_SESSION['username'].'.png" width="50" height="50">';
-	  ?>
-	  <br>
-      <a href="action_logout.php">Log Out</a>
-    </div>
-    <div class="editProfile">
-      <a href="edit_profile.php">Edit Profile</a>
-    </div>
   </header>

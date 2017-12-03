@@ -63,6 +63,8 @@ INSERT INTO user_cat VALUES ('Leisure','peterDink');
 INSERT INTO user_cat VALUES ('Beauty','peterDink');
 INSERT INTO user_cat VALUES ('Other','peterDink');
 
+
+
 INSERT INTO todo VALUES (NULL,
   'Homework',
   'Computer network class',
@@ -95,12 +97,14 @@ INSERT INTO todo VALUES (NULL,
   'peterDink'
 );
 
+
 INSERT INTO todo VALUES (NULL,
   'Hair',
   'Go to the hairdresser',
   '2017-11-23',
   'Beauty',
-  'anaXpto'
+  'annaXpto'
 );
+
 
 --sqlite data.db < data.sql
