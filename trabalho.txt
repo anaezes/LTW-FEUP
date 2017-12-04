@@ -1,0 +1,27 @@
+The minimum expected requirements are the following:
+
+    All users should be able to:
+        Register a new account. DONE
+        Login and logout.   DONE
+        Edit their profile. 
+        List their to-do lists.
+        Create new to-do lists.
+        Add items to a to-do list.
+        Mark an item as completed.
+        Delete a to-do list.
+
+Students should also make sure that:
+
+    The following technologies are all used: HTML, CSS, PHP, Javascript, Ajax/JSON, PDO/SQL (using sqlite).
+    The web site should be as secure as possible.
+    Code should be organized and consistent.
+    Frameworks are not allowed.
+    Small helper libraries (e.g. displaying a gallery of pictures) might be allowed (talk with your practical class teacher).
+
+Some suggested extra requirements:
+
+    Add extra information to to-do lists (category, title, color, …).
+    Add extra information to items (date due, dependency, color, …).
+    Allow items to be assigned to other users. Show the list of items assigned to the current user.
+    Allow the creation of projects. A project would have a set of users and to-do lists.
+    Advanced search capabilities.

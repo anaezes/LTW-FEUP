@@ -38,6 +38,11 @@
 
    </li>
 
+   <li>
+    <a href id="all"> All </a>
+   </li>
+
+
    <?php foreach ($categories as $category) { 
     $cat_color = $category['cat_color'];
     $cat_name = $category['cat_name'];
@@ -45,13 +50,18 @@
 
     <li>
       <a href="?cat_name=<?=$cat_name?>"
+        style="color:<?php echo $cat_color?>;"
         onmouseover='this.style.background="<?php echo $cat_color?>",
         this.style.color="white" ' 
         onmouseout='this.style.background="#F8F8FF",
-        this.style.color="#696969" '>
+        this.style.color="<?php echo $cat_color?>" '>
         <?=$cat_name?> </a>
       </li>
       <?php } ?>
+
+    <li>
+    <a href id="old"> Old </a>
+   </li>
     </ul>
   </div>
 

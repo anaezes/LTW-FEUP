@@ -15,7 +15,7 @@
         <select id="category" name="category">
 
           <?php foreach ($categories as $category) { ?>
-            <li><option value=$category['cat_name']> <?=$category['cat_name']?></li>
+            <li><option value="<?=$category['cat_name']?>"> <?=$category['cat_name']?></li>
               <?php } ?>
             </select>
           </p>

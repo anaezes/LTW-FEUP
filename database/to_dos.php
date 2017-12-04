@@ -14,12 +14,12 @@ function createToDo($username, $category, $title, $description, $td_date)
 {
 		global $dbh;
 
-		$stmt = $dbh->prepare('INSERT INTO todo VALUES(NULL, :title, :description, :td_date, :cat_name, :user)');
+		$stmt = $dbh->prepare('INSERT INTO todo VALUES(NULL, :title, :description, :td_date, :category, :user)');
 		$stmt->execute([
 			':title' => $title, 
 			':description' => $description, 
 			':td_date' => $td_date,
-			':cat_name' => $category,
+			':category' => $category,
 			':user' => $username,
 		]);
 		return $stmt->fetch() !== false;
