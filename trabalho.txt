@@ -3,12 +3,12 @@ The minimum expected requirements are the following:
     All users should be able to:
         Register a new account. DONE
         Login and logout.   DONE
-        Edit their profile. 
-        List their to-do lists.
-        Create new to-do lists.
-        Add items to a to-do list.
-        Mark an item as completed.
-        Delete a to-do list.
+    ->  Edit their profile. ALMOST
+        List their to-do lists. DONE
+        Create new to-do lists. DONE
+        Add items to a to-do list. DONE
+    ->  Mark an item as completed.
+    ->  Delete a to-do list.
 
 Students should also make sure that:
 

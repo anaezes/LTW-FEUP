@@ -52,9 +52,9 @@ body > header {
 }
 
 .categories ul{
-   text-align: center;
-    align-content: left;
-    padding-left: 40px;
+ text-align: center;
+ align-content: left;
+ padding-left: 40px;
 
 }
 
@@ -64,7 +64,7 @@ body > header {
     display: block;
 }
 
-.categories a, .myBtn {
+.categories a, .AddCatBtn .CatBtn {
     background-color: #F8F8FF;
     color:  #696969;
     display: block; 
@@ -76,7 +76,7 @@ body > header {
 
 }
 
-.categories a:hover, .myBtn:hover {
+.categories a:hover, .AddCatBtn:hover .CatBtn:hover {
     background-color: #ccc; 
 }
 
@@ -99,17 +99,25 @@ body > header {
 
 .todo div {
     border-radius: 5px;
-    padding: 20px;
 }
 
-.todo > article{
+.todos {
+    align-content: left;
+}
+
+.todos > article:nth-child(n){
+    padding-left: 10px;
     background-color: #eee; 
-    border-radius: 25px;
-    border: 2px solid #696969;
+    border-radius: 5px;
+    border: 1px solid #696969;
     padding-left: 15px;
-    height: 150px; 
-    margin-top: 10px;
-    width: 90%;
+    margin-bottom: 5px;
+    height: 130px; 
+    width: 87%;
+}
+.todos > article:nth-child(n) > p:first-child {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -119,7 +127,7 @@ body > header {
 }
 
 .todo .add {
-    width: 87%;
+    width: 83.5%;
     background-color: #45a049; 
     border: none;
     padding: 15px 32px;
@@ -127,6 +135,7 @@ body > header {
     display: inline-block;
     font-size: 16px;
     display: block;  
+    margin-bottom: 10px;
 }
 .todo .add:hover{
   background-color: #4CAF50;
@@ -192,7 +201,7 @@ input[type=text], input[type=password], select {
 }
 
 .Buttons > ul > li:hover{
-   background-color: #45a049;   
+ background-color: #45a049;   
 }
 
 /*Bottons in first page */
@@ -237,7 +246,7 @@ input[type=text], input[type=password], select {
 }
 
 .startButtons > ul > li:hover{ 
-   background-color: #555555;
+ background-color: #555555;
 }
 
 /*image background */
@@ -259,13 +268,13 @@ input[type=text], input[type=password], select {
 }
 
 .form-1::before, .addtodo::before{
- position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    content: "";
-    z-index: -1;
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   content: "";
+   z-index: -1;
 }
 
 .form-1{
@@ -279,10 +288,10 @@ input[type=text], input[type=password], select {
 
     /* Styles */
     box-shadow: 
-        0 0 1px rgba(0, 0, 0, 0.3), 
-        0 3px 7px rgba(0, 0, 0, 0.3), 
-        inset 0 1px rgba(0,0,0,0.3),
-        inset 0 -3px 2px rgba(0,0,0,0.25);
+    0 0 1px rgba(0, 0, 0, 0.3), 
+    0 3px 7px rgba(0, 0, 0, 0.3), 
+    inset 0 1px rgba(0,0,0,0.3),
+    inset 0 -3px 2px rgba(0,0,0,0.25);
     border-radius: 5px;
     background-color: rgba(109, 109, 109, 0.8);
 }
@@ -302,10 +311,10 @@ input[type=text], input[type=password], select {
 
     /* Styles */
     box-shadow: 
-        0 0 1px rgba(0, 0, 0, 0.3), 
-        0 3px 7px rgba(0, 0, 0, 0.3), 
-        inset 0 1px rgba(0,0,0,0.3),
-        inset 0 -3px 2px rgba(0,0,0,0.25);
+    0 0 1px rgba(0, 0, 0, 0.3), 
+    0 3px 7px rgba(0, 0, 0, 0.3), 
+    inset 0 1px rgba(0,0,0,0.3),
+    inset 0 -3px 2px rgba(0,0,0,0.25);
     border-radius: 5px;
     background-color: rgba(109, 109, 109, 0.8);
 }
@@ -316,8 +325,8 @@ input[type=text], input[type=password], select {
 }
 
 .regBottons{
-   text-align: center; 
-   margin-right: 40px;
+ text-align: center; 
+ margin-right: 40px;
 }
 
 .regBottons input[type=submit], .regBottons input[type=reset],
@@ -354,18 +363,18 @@ input[type=text], input[type=password], select {
 .regBottons input[type=file], .addToDoBottons input[type=file] {
   display: block;
   position:relative;
-    display:inline-block;    
-    border-radius:8px;
-    border:#ebebeb solid 1px;
-    width:250px; 
-    padding: 4px 6px 4px 8px;
-    color: #7f7f7f;
-    margin-top: 2px;
-    background:white;
-    -webkit-appearance:none; 
-    position:absolute;
-    top:0; left:0;
-    opacity:0;
+  display:inline-block;    
+  border-radius:8px;
+  border:#ebebeb solid 1px;
+  width:250px; 
+  padding: 4px 6px 4px 8px;
+  color: #7f7f7f;
+  margin-top: 2px;
+  background:white;
+  -webkit-appearance:none; 
+  position:absolute;
+  top:0; left:0;
+  opacity:0;
 }
 
 /*page Add to Do*/
@@ -429,20 +438,29 @@ input[type=text], input[type=password], select {
     cursor: pointer;
 }
 
-#myBtn {
+#AddCatBtn{ 
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 75px; 
+    padding-right: 75px; 
+}
+
+#AddCatBtn, #CatBtn{
     background-color: #F8F8FF;
     color:  #696969;
     display: block; 
-    padding-left: 75px; 
-    padding-right: 75px; 
     text-decoration: none; 
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-
+    border: none; 
 }
 
-#myBtn:hover {
+#CatBtn{
+    padding: 20px;
+    padding-left: 75px; 
+    padding-right: 65px; 
+}
+
+
+#AddCatBtn:hover, #CatBtn:hover{
     background-color: #ccc; 
 }
 
