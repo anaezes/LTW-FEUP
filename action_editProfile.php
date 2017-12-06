@@ -1,46 +1,35 @@
 <?php
 	include_once('includes/init.php');
 	include_once('database/user.php');
-if (isset($_POST['submit'])) {
-
+	
 	$username = $_SESSION['username'];
 	$name = $_POST['name'];
-	$cpassword = $_POST['cipass'];
-	$npassword = $_POST['ipass'];
-	$photo = $_POST['iphoto'];
+	$cpassword = $_POST['cpassword'];
+	$npassword = $_POST['password'];
+	$photo = $_POST['photo'];
 
-	$errorEmpty = false;
-	$errorEmail = false;
+	//Caso a Password esteja errada
+	if(!isLoginCorrect($username, $cpassword) || $name=="" || $cpassword="" || npassword=="")
+	{
+		header('location:edit_profile.php'); 
 
-	if (empty($name) || empty($cpassword) || empty($npassword) || !isLoginCorrect($username, $cpassword) ) {
-		echo "<span class='form-error'>Fill in all fields!</span>";
-		$errorEmpty = true;
 	}
-	else {
-		updateUser($username, $name, $photo);
-		updatePassUser($username, $npassword);
-		exit();
-		header('location: login.php'); 
-		echo "<span class='form-success'>All changes saved!</span>";
-	}
+	//Altera as definições
+	else{
 
-}
+			if(!updateUser($username, $name, $photo))
+			{
+				//Neste momento não faz nada dentro do if
+			}
+
+			if(!updatePassUser($username, $npassword))
+			{
+				//Neste momento não faz nada dentro do if
+			}
+
+			header('location:login.php');
+
+	}
+	
+	exit();
 ?>
-
-<script>
-	$("#name, #cipass, #ipass, #iphoto").removeClass( "input-error");
-
-	var errorEmpty = "<?php echo $errorEmpty; ?>";
-	var errorEmail = "<?php echo $errorEmail; ?>";
-
-	if (errorEmpty == true){
-	    $("#name, #cipass, #ipass").addClass("input-error");
-	}
-	if (errorEmpty == false){
-	    $("#name, #cipass, #ipass, #iphoto").val('');
-	}
-
-$( "button" ).click(function() {
-  $( "p" ).empty();
-});
-</script>
