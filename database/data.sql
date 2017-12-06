@@ -17,7 +17,8 @@ CREATE TABLE todo (
   td_description VARCHAR NOT NULL,
   td_date DATE,
   cat_name VARCHAR REFERENCES category NOT NULL,
-  usr_username VARCHAR REFERENCES user NOT NULL
+  usr_username VARCHAR REFERENCES user NOT NULL,
+  td_check BIT NOT NULL
 );
 
 CREATE TABLE user_cat (
@@ -70,7 +71,8 @@ INSERT INTO todo VALUES (NULL,
   'Computer network class',
   '2017-11-23',
   'Work',
-  'johnSnow'
+  'johnSnow',
+  0
 );
 
 INSERT INTO todo VALUES (NULL,
@@ -78,7 +80,8 @@ INSERT INTO todo VALUES (NULL,
   'Make project for ltw class',
   '2017-12-10',
   'Work',
-  'johnSnow'
+  'johnSnow',
+  1
 );
 
 INSERT INTO todo VALUES (NULL,
@@ -86,7 +89,8 @@ INSERT INTO todo VALUES (NULL,
   'Pay the tax on finances.',
   '2017-11-31',
   'Finances',
-  'johnSnow'
+  'johnSnow',
+  0
 );
 
 INSERT INTO todo VALUES (NULL,
@@ -94,7 +98,8 @@ INSERT INTO todo VALUES (NULL,
   'Computer network class',
   '2017-11-29',
   'Work',
-  'peterDink'
+  'peterDink',
+  0
 );
 
 
@@ -103,7 +108,8 @@ INSERT INTO todo VALUES (NULL,
   'Go to the hairdresser',
   '2017-11-23',
   'Beauty',
-  'annaXpto'
+  'annaXpto',
+  0
 );
 
 
