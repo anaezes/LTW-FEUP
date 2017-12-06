@@ -3,12 +3,12 @@ include_once('includes/init.php');
 include_once('database/to_dos.php');
 
 
-$td_id = $_POST['dateofactivity'];
-$check_value= $_POST['check'];
+    $value = $_POST['chkvalue'];
+    $todo_id = $_POST['todo_id'];
 
-echo $check_value;
+echo $value;
 
-if(!changeCheckTodo($td_id, $check_value)) {
+if(!changeCheckTodo($todo_id, $value)) {
 }
 
 header('location:index.php');
