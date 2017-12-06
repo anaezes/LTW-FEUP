@@ -18,15 +18,16 @@
             <li><option value="<?=$category['cat_name']?>"> <?=$category['cat_name']?></li>
               <?php } ?>
             </select>
-          </p>
-
-          <label for="description">Description</label>
-          <p class="field">
+            <br>
+            <br>
+            <br>     
+          <label id="descrip" for="description">Description</label>
+          <p class="description">
             <textarea name="description" id="description" >
             </textarea>
           </p>
 
-          <label for="dateofactivity">Date Of Activity</label>
+          <label id="dateofactivity" for="dateofactivity">Date Of Activity</label>
           <input type="date" name="dateofactivity" id="dateofactivity"/>
 
           
@@ -39,7 +40,7 @@
           </div>
 
 
-        </form>
+        </p>
 
       </div>
       

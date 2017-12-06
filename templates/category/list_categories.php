@@ -7,7 +7,8 @@
       <li>
 
         <!-- Trigger/Open The Modal -->
-        <button id="AddCatBtn">&#8853</button>
+        <button id="AddCatBtn"><i class="fa fa-plus" aria-hidden="true"></i>
+</button>
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -73,7 +74,7 @@
       </tr>
 
       <tr>
-        <th> <a href="edit_profile.php" style="font-size: 25px">&#x2699</a> </th>
+        <th> <a id="confIcon" href="edit_profile.php"><i class="fa fa-cog" aria-hidden="true"></i></a> </th>
         <th> <a href="action_logout.php" >Log Out</a> </th>
       </tr>
     </table>

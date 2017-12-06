@@ -18,12 +18,12 @@
           <li>
            <form name="checkbox" action="action_check_todo.php" method="POST"> 
             <label> Done </label>
-            <input type="checkbox"  id="<?=$todo_id?>" name="check" value="check" onchange="changeCheck(event)" 
+            <input type="checkbox"  id="check<?=$todo_id?>" name="check" value="check" onchange="changeCheck(event)" 
             <?php if($todo['td_check']) echo 'checked="checked"'; ?> 
           </form>
         </li>
         <li> 
-          <i class="fa fa-trash-o" aria-hidden="true"></i>        
+          <a class="trash" href="#popup1"> <i  class="fa fa-trash-o"  aria-hidden="false"> </i></a>
         </li>
       </ul>
 
@@ -39,11 +39,10 @@
 
   function changeCheck(event) {
 
-    var todo_id = event.target.id;
-
-    var check_value = event.target;
+    var aux_id = (event.target.id).split(/(\d+)/);
+    var todo_id = aux_id[1];
     var value = 0;
-    if (check_value.checked)
+    if (event.target.checked)
       value = 1;
     
     $.ajax( {
@@ -51,7 +50,6 @@
       method: 'POST',
       data: { todo_id: todo_id, chkvalue: value}
     } );
-
   } 
 
 </script>
