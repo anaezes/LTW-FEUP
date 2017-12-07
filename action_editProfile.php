@@ -7,7 +7,7 @@
 	// {
 
 		$username = $_SESSION['username'];
-		$name = $_POST['name'];
+		$name = $_POST['thename'];
 		$cpassword = $_POST['cpass'];
 		$npassword = $_POST['pass'];
 		

@@ -512,5 +512,21 @@ input[type=text], input[type=password], select {
     background-color: #ccc; 
 }
 
+form input.invalid {
+  border: 1px solid red;
+  box-shadow: red 0 0 2px 2px;
+}
+
+form input.invalid + .hint{
+  visibility: visible;
+}
+
+form .hint {
+  font-size: 0.6em;
+  padding: 0.5em;
+  align-self: center;
+  visibility: hidden;
+}
+
 
 </style>
