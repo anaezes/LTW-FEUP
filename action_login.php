@@ -9,9 +9,13 @@
 		setCurrentUser($_POST['username']);
 		$data = getUserData($_POST['username']);
 		$_SESSION['usr_name'] = $data[0]['usr_name'];
+		header('location:index.php');
+	}
+	else{
+		header('location:login.php');
+		//dar print - falha login
 	}
 	
-	header('location:index.php');
 	exit();
 
 ?>
