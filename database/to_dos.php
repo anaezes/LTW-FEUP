@@ -30,18 +30,24 @@ function updateToDos($username, $id_cat, $id_todo, $name, $description, $date)
 
 }
 
-function deleteToDos($username, $id_cat, $id_todo)
-{
-
+function deleteToDo($username, $td_id) {
+	global $dbh;
+	$stmt = $dbh->prepare('DELETE FROM todo WHERE td_id = :td_id AND usr_username = :username');
+	$stmt->execute([
+		':td_id' => $td_id,
+		':username' => $username,
+	]);
+	return $stmt->fetch() !== false;
 }
 
-function changeCheckTodo($td_id, $check_value) {
+function changeCheckTodo($username, $td_id, $check_value) {
 
 	global $dbh;
-	$stmt = $dbh->prepare('UPDATE todo SET td_check = :check_value WHERE td_id = :td_id');
+	$stmt = $dbh->prepare('UPDATE todo SET td_check = :check_value WHERE td_id = :td_id AND usr_username = :username');
 	$stmt->execute([
 		':td_id' => $td_id,
 		':check_value' => $check_value,
+		':username' => $username,
 	]);
 	return $stmt->fetch() !== false;
 

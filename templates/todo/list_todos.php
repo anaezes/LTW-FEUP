@@ -2,7 +2,7 @@
   <div class ="add">
     <a href="../../../addTodo.php">Add To Do</a>
   </div>
-  <div class = "todos">
+  <div class = "todos" id="todos">
 
     <?php foreach ($todos as $todo) { 
       $todo_id = $todo['td_id'];
@@ -23,7 +23,7 @@
           </form>
         </li>
         <li> 
-          <a class="trash" href="#popup1"> <i  class="fa fa-trash-o"  aria-hidden="false"> </i></a>
+          <a href="#" onclick="deleteTodo(event, <?=$todo_id?>)" > <i  class="fa fa-trash-o"></i> </a>
         </li>
       </ul>
 
@@ -36,6 +36,18 @@
 
 
 <script>
+
+function deleteTodo(event, todo_id) {
+
+    if (confirm("Are you sure?")) {
+        $.ajax({        
+            url: 'action_delete_todo.php',
+            type: 'POST',             
+            data: {todo_id: todo_id}
+        });  
+        $("#todos").load(location.href+" #todos>*","");  
+    }
+}
 
   function changeCheck(event) {
 

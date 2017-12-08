@@ -133,12 +133,13 @@ vertical-align: middle;
   font-weight: bold;
 }
 
-.trash{
+.todos > article > ul > li > a {
   font-size: 125%;
-   padding-right: 20px;
+  padding-right: 20px;
   vertical-align: middle;
   color:black;
 }
+
 
 .todos ul{
   list-style:none;
