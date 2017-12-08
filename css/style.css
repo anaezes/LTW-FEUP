@@ -9,16 +9,19 @@ body > header {
     padding: 1em;
 }
 
+.info > img{
+  width: 50%;
+}
 
 .lateral .user{
     text-align: left;
-    margin: 20px 0px 0px 20px ;
-    padding-top: 25px;
+    margin: 4% 0px 0px 6% ;
+    padding-top: 10%;
     border-top: 2px solid #696969;
 }
 
 .lateral .user > table{
-    border-top: 1px;
+    border-top: 1%;
 }
 
 .lateral .user a{
@@ -35,43 +38,39 @@ body > header {
 
 .categories h2{
     display: none;
-
 }
 
 .lateral {
-    align-content: left;
-    width: 200px; 
+    width: 13%; 
     height: 100%;
     background-color: #F8F8FF;
     position: absolute;
-    
-    margin-top: 2px;
-
+    margin-top: 1%;
 }
 
 .categories ul{
  text-align: center;
- align-content: left;
- padding-left: 40px;
-
+ align-content: center;
+ padding-left: 0%;
+ margin-left: 0%;
 }
 
 .categories ul li {
     align-content: left;
     list-style: none;
     display: block;
+
 }
 
 .categories a, .AddCatBtn .CatBtn {
     background-color: #F8F8FF;
     color:  #696969;
     display: block; 
-    padding: 20px; 
+    padding: 10%; 
     text-decoration: none; 
     text-align: center;
     font-weight: bold;
     font-size: 16px;
-
 }
 
 .categories a:hover, .AddCatBtn:hover .CatBtn:hover {
@@ -86,31 +85,31 @@ body > header {
 
 
 .todo {
-    position: absolute;
-    margin-top: 15px;
-    margin-left: 300px;
+    position: relative;
+    margin-top: 1%;
     float: right;
     width: 80%;
-    height: 200px;
     line-height: 8px;
 }
 
 .todo div {
     border-radius: 5px;
+    width: 100%;
 }
 
 .todos {
     align-content: left;
+    width: 87%;
 }
 
 
 .todos > article:nth-child(n){
-    padding-left: 10px;
+
     border-radius: 5px;
     border: 1px solid #c8c8ce;
-    padding-left: 15px;
-    margin-bottom: 5px;
-    height: 150px; 
+    padding-left: 2%;
+    margin-bottom: 0.5%;
+    height: 145px; 
     width: 87%;
 }
 .todos:nth-child(n) .name {
@@ -143,13 +142,13 @@ body > header {
 
 .todos ul{
   list-style:none;
-  text-align: left;
-  margin-left: 85%;
+  text-align: center;
+  margin-left: 60%;
 }
 
 .todos ul li{
     display: inline-block;
-    padding-right: 10px;
+    padding-right: 5%;
 }
 
 .todo .add a {
@@ -162,7 +161,7 @@ body > header {
     width: 83.5%;
     background-color: #45a049; 
     border: none;
-    padding: 15px 32px;
+    padding: 1.5% 2.5%;
     text-align: center;
     display: inline-block;
     font-size: 16px;
@@ -491,8 +490,8 @@ input[type=text], input[type=password], select {
 #AddCatBtn{ 
     font-weight: bold;
     font-size: 16px;
-    padding-left: 75px; 
-    padding-right: 60px; 
+    padding-left: 45%; 
+    padding-right: 45%; 
     font-size: 25px;
 }
 
@@ -506,8 +505,8 @@ input[type=text], input[type=password], select {
 
 #CatBtn{
     padding: 20px;
-    padding-left: 75px; 
-    padding-right: 65px; 
+    padding-left: 45%; 
+    padding-right: 45%; 
 }
 
 
