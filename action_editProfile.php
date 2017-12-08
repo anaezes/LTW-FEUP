@@ -30,8 +30,6 @@
 		}
 		else 
 		{
-			// echo $file_tmp.'<br>';
-			// echo $final_dest.'<br>';
 			move_uploaded_file($file_tmp, $final_dest);
 			updateUser($username, $name);
 			updatePassUser($username, $npassword);
