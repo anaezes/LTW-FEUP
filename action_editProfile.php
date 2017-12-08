@@ -23,8 +23,10 @@
 
 		
 		if (empty($name) || empty($cpassword) || empty($npassword) || !isLoginCorrect($username, $cpassword) || !($file_size < 500000 && $file_type == 'image/png')) {
+			header('location:edit_profile.php');
 			echo "<span class='form-error'>Fill in all fields!</span>";
 			$errorEmpty = true;
+			exit();
 		}
 		else 
 		{
@@ -32,7 +34,6 @@
 			updateUser($username, $name);
 			updatePassUser($username, $npassword);
 			header('location: index.php'); 
-			echo "<span class='form-success'>All changes saved!</span>";
 			exit();
 		}
 
