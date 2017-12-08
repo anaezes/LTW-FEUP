@@ -103,9 +103,9 @@ body > header {
     align-content: left;
 }
 
+
 .todos > article:nth-child(n){
     padding-left: 10px;
-    background-color: #eee; 
     border-radius: 5px;
     border: 1px solid #696969;
     padding-left: 15px;

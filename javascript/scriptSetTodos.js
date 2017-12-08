@@ -23,4 +23,5 @@ function deleteTodo(event, todo_id) {
       method: 'POST',
       data: { todo_id: todo_id, chkvalue: value}
     } );
+    $("#todos").load(location.href+" #todos>*","");  
   } 
