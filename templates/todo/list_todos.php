@@ -1,3 +1,5 @@
+ <script src="javascript/scriptSetTodos.js" defer></script>
+
  <div class="todo">
   <div class ="add">
     <a href="../../../addTodo.php">Add To Do</a>
@@ -23,6 +25,9 @@
           </form>
         </li>
         <li> 
+         <a id="confIcon" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </li>
+        <li> 
           <a href="#" onclick="deleteTodo(event, <?=$todo_id?>)" > <i  class="fa fa-trash-o"></i> </a>
         </li>
       </ul>
@@ -33,35 +38,3 @@
 </div>
 
 </div>
-
-
-<script>
-
-function deleteTodo(event, todo_id) {
-
-    if (confirm("Are you sure?")) {
-        $.ajax({        
-            url: 'action_delete_todo.php',
-            type: 'POST',             
-            data: {todo_id: todo_id}
-        });  
-        $("#todos").load(location.href+" #todos>*","");  
-    }
-}
-
-  function changeCheck(event) {
-
-    var aux_id = (event.target.id).split(/(\d+)/);
-    var todo_id = aux_id[1];
-    var value = 0;
-    if (event.target.checked)
-      value = 1;
-    
-    $.ajax( {
-      url: 'action_check_todo.php',
-      method: 'POST',
-      data: { todo_id: todo_id, chkvalue: value}
-    } );
-  } 
-
-</script>

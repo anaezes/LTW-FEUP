@@ -113,29 +113,29 @@ body > header {
     height: 150px; 
     width: 87%;
 }
-.todos > article:nth-child(n) > p:first-child {
+.todos:nth-child(n) .name {
     font-size: 20px;
     font-weight: bold;
 }
 
-.todos > article > ul > li input[type=checkbox] {
+.todos:nth-child(n) label {
+  vertical-align: middle;
+  color:black;
+}
+
+.todos:nth-child(n) input[type=checkbox] {
     /* Double-sized Checkboxes */
   -ms-transform: scale(1.3); /* IE */
   -moz-transform: scale(1.3); /* FF */
   -webkit-transform: scale(1.3); /* Safari and Chrome */
   -o-transform: scale(1.3); /* Opera */
-  padding: 10px;
-vertical-align: middle;
+ vertical-align: middle;
 }
 
-.todos > article > ul > li label {
-  vertical-align: middle;
-  font-weight: bold;
-}
+
 
 .todos > article > ul > li > a {
   font-size: 125%;
-  padding-right: 20px;
   vertical-align: middle;
   color:black;
 }
@@ -143,12 +143,13 @@ vertical-align: middle;
 
 .todos ul{
   list-style:none;
-  text-align: right;
+  text-align: left;
+  margin-left: 80%;
 }
 
 .todos ul li{
-    padding-left: 30px;
     display: inline-block;
+    padding-right: 20px;
 }
 
 .todo .add a {
