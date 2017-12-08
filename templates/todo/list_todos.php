@@ -25,9 +25,6 @@
           </form>
         </li>
         <li> 
-         <a id="confIcon" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        </li>
-        <li> 
           <a href="#" onclick="deleteTodo(event, <?=$todo_id?>)" > <i  class="fa fa-trash-o"></i> </a>
         </li>
       </ul>
