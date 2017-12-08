@@ -36,33 +36,33 @@ INSERT INTO category VALUES ('Leisure', '#D2691E'); -- dark orange
 INSERT INTO category VALUES ('Beauty', '#800080'); --purple
 INSERT INTO category VALUES ('Other', '#696969'); --grey 
 
-INSERT INTO user VALUES('johnSnow', '7110eda4d09', 'Kit Harrigton');
-INSERT INTO user VALUES('annaXpto','7110e062aa5', 'Anne Shirly');
-INSERT INTO user VALUES('peterDink','7110eda4572', 'Peter Dinklage');
+INSERT INTO user VALUES('john', 'johnSn1#', 'Kit Harrigton');
+INSERT INTO user VALUES('danny', 'dannyTa1#', 'Emilia Clarke');
+INSERT INTO user VALUES('tyrion','tyrionLa1#', 'Peter Dinklage');
 
-INSERT INTO user_cat VALUES ('Home','johnSnow');
-INSERT INTO user_cat VALUES ('Work','johnSnow');
-INSERT INTO user_cat VALUES ('Finances','johnSnow');
-INSERT INTO user_cat VALUES ('Sport','johnSnow');
-INSERT INTO user_cat VALUES ('Leisure','johnSnow');
-INSERT INTO user_cat VALUES ('Beauty','johnSnow');
-INSERT INTO user_cat VALUES ('Other','johnSnow');
+INSERT INTO user_cat VALUES ('Home','john');
+INSERT INTO user_cat VALUES ('Work','john');
+INSERT INTO user_cat VALUES ('Finances','john');
+INSERT INTO user_cat VALUES ('Sport','john');
+INSERT INTO user_cat VALUES ('Leisure','john');
+INSERT INTO user_cat VALUES ('Beauty','john');
+INSERT INTO user_cat VALUES ('Other','john');
 
-INSERT INTO user_cat VALUES ('Home','annaXpto');
-INSERT INTO user_cat VALUES ('Work','annaXpto');
-INSERT INTO user_cat VALUES ('Finances','annaXpto');
-INSERT INTO user_cat VALUES ('Sport','annaXpto');
-INSERT INTO user_cat VALUES ('Leisure','annaXpto');
-INSERT INTO user_cat VALUES ('Beauty','annaXpto');
-INSERT INTO user_cat VALUES ('Other','annaXpto');
+INSERT INTO user_cat VALUES ('Home','danny');
+INSERT INTO user_cat VALUES ('Work','danny');
+INSERT INTO user_cat VALUES ('Finances','danny');
+INSERT INTO user_cat VALUES ('Sport','danny');
+INSERT INTO user_cat VALUES ('Leisure','danny');
+INSERT INTO user_cat VALUES ('Beauty','danny');
+INSERT INTO user_cat VALUES ('Other','danny');
 
-INSERT INTO user_cat VALUES ('Home','peterDink');
-INSERT INTO user_cat VALUES ('Work','peterDink');
-INSERT INTO user_cat VALUES ('Finances','peterDink');
-INSERT INTO user_cat VALUES ('Sport','peterDink');
-INSERT INTO user_cat VALUES ('Leisure','peterDink');
-INSERT INTO user_cat VALUES ('Beauty','peterDink');
-INSERT INTO user_cat VALUES ('Other','peterDink');
+INSERT INTO user_cat VALUES ('Home','tyrion');
+INSERT INTO user_cat VALUES ('Work','tyrion');
+INSERT INTO user_cat VALUES ('Finances','tyrion');
+INSERT INTO user_cat VALUES ('Sport','tyrion');
+INSERT INTO user_cat VALUES ('Leisure','tyrion');
+INSERT INTO user_cat VALUES ('Beauty','tyrion');
+INSERT INTO user_cat VALUES ('Other','tyrion');
 
 
 
@@ -71,7 +71,7 @@ INSERT INTO todo VALUES (NULL,
   'Computer network class',
   '2017-11-23',
   'Work',
-  'johnSnow',
+  'john',
   0
 );
 
@@ -80,7 +80,7 @@ INSERT INTO todo VALUES (NULL,
   'Make project for ltw class',
   '2017-12-10',
   'Work',
-  'johnSnow',
+  'john',
   1
 );
 
@@ -89,7 +89,7 @@ INSERT INTO todo VALUES (NULL,
   'Pay the tax on finances.',
   '2017-11-31',
   'Finances',
-  'johnSnow',
+  'john',
   0
 );
 
@@ -98,7 +98,7 @@ INSERT INTO todo VALUES (NULL,
   'Computer network class',
   '2017-11-29',
   'Work',
-  'peterDink',
+  'tyrion',
   0
 );
 
@@ -108,7 +108,7 @@ INSERT INTO todo VALUES (NULL,
   'Go to the hairdresser',
   '2017-11-23',
   'Beauty',
-  'annaXpto',
+  'danny',
   0
 );
 

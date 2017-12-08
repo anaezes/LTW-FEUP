@@ -2,7 +2,8 @@
 function getListToDos($username)
 {
 	global $dbh;
-	$stmt = $dbh->prepare("SELECT * FROM todo WHERE usr_username LIKE :username GROUP BY td_name");
+	$stmt = $dbh->prepare("SELECT * FROM todo WHERE usr_username LIKE :username GROUP BY td_name
+		ORDER BY td_date");
 	$stmt->execute([
 		':username' => $username,
 	]);

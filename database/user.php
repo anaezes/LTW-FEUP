@@ -70,6 +70,9 @@ function addFirstCategories($username) {
 	$stmt = $dbh->prepare("INSERT INTO user_cat VALUES('Leisure', :username)");
 	$stmt->execute([':username' => $username]);
 
+	$stmt = $dbh->prepare("INSERT INTO user_cat VALUES('Beauty', :username)");
+	$stmt->execute([':username' => $username]);
+
 	$stmt = $dbh->prepare("INSERT INTO user_cat VALUES('Other', :username)");
 	$stmt->execute([':username' => $username]);
 
