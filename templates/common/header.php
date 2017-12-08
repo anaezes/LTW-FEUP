@@ -1,3 +1,12 @@
+<?php
+include_once('includes/init.php');
+
+if(!isset($_SESSION['username']))
+{
+	header('location:page.php');
+	exit();
+}
+?>
 <!DOCTYPE html>
 <html>
 

@@ -37,8 +37,6 @@ function updateUser($username, $name)
 		':user' => $username,
 		':name' => $name,
 	]);
-
-		//falta atualizar a foto -> não está na base de dados
 	
 	return $stmt->fetch() !== false;
 }
