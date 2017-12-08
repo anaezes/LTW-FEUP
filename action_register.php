@@ -4,6 +4,7 @@
 	
 	$username = $_POST['username'];
 	$password = $_POST['password'];
+	$passwordr = $_POST['passwordr'];
 	$name = $_POST['name'];
 	
 	$file_name = $_FILES['photo']['name'];
@@ -12,7 +13,7 @@
 	$file_tmp = $_FILES['photo']['tmp_name'];
 	$final_dest = 'img/' . $username . '.png';
 	
-	if(!($username == '' || $password == '' || $name == '' || $file_name == ''))
+	if(!($username == '' || $password == '' || $passwordr == '' || $name == '' || $file_name == ''))
 	{
 		if($file_size < 500000 && $file_type == 'image/png')
 		{
