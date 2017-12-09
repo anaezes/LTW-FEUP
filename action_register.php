@@ -13,6 +13,7 @@
 	$file_tmp = $_FILES['photo']['tmp_name'];
 	$final_dest = 'img/' . $username . '.png';
 	
+	
 	if(!($username == '' || $password == '' || $passwordr == '' || $name == '' || $file_name == ''))
 	{
 		if($file_size < 500000 && $file_type == 'image/png')

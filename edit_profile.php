@@ -1,3 +1,12 @@
+<?php
+include_once('includes/init.php');
+
+if(!isset($_SESSION['username']))
+{
+	header('location:page.php');
+	exit();
+}
+?>
 <script src="javascript/scriptEdit.js" defer></script>
   <link rel="stylesheet" href="css/style.css">
 <section id="editProfile">

@@ -32,6 +32,8 @@ else
 						<input type="text" id="iuser" name="username" required />
 						<span class="hint">Only lowercase, at least 3 characters</span>
 						<br>
+						<span id="msg"></span>
+						<br>
 						<br>
 					</p>
 					<p class="field">

@@ -2,7 +2,7 @@
 
  <div class="todo">
   <div class ="add">
-    <a href="../../../addTodo.php">Add To Do</a>
+    <a href="addTodo.php">Add To Do</a>
   </div>
   <div class = "todos" id="todos">
 

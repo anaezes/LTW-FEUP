@@ -13,20 +13,29 @@ function getUserData($username)
 	global $dbh;
 	$stmt = $dbh->prepare('SELECT * FROM user WHERE usr_username = ?');
 	$stmt->execute(array($username));
-	$data = $stmt->fetchAll();
-	return $data;
+	return $stmt->fetch() !== false;
+	// $data = $stmt->fetchAll();
+	// return $data;
 }
 
 function createUser($username, $password, $name)
 {
 	global $dbh;
-	$stmt = $dbh->prepare('INSERT INTO user VALUES(:user, :pass, :name)');
-	$stmt->execute([
-		':user' => $username,
-		':pass' => $password,
-		':name' => $name,
-	]);
-	return $stmt->fetch() !== false;
+	try
+	{
+		$stmt = $dbh->prepare('INSERT INTO user VALUES(:user, :pass, :name)');
+		$stmt->execute([
+			':user' => $username,
+			':pass' => $password,
+			':name' => $name,
+		]);
+		return $stmt->fetch() !== false;
+	}
+	catch(Exception $e)
+	{
+		header('location:register_user.php');
+		exit();
+	}
 }
 
 function updateUser($username, $name)

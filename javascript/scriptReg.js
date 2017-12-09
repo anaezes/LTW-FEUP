@@ -1,4 +1,5 @@
 let username = document.querySelector('.form-1 input[name=username]');
+let msg = document.querySelector('.form-1 span[id=msg]');
 username.addEventListener('keyup', validateUsername, false);
 
 let password = document.querySelector('.form-1 input[name=password]');
@@ -14,7 +15,21 @@ function validateUsername() {
     this.classList.add('invalid');
   }
   else
+  {
     this.classList.remove('invalid');
+  }
+
+	let ajaxRequest = new XMLHttpRequest();
+	ajaxRequest.onreadystatechange = function()
+	{
+		if(ajaxRequest.readyState == 4 && ajaxRequest.status == 200)
+		{
+			msg.innerHTML = ajaxRequest.responseText;
+		}
+	}
+
+	ajaxRequest.open("GET", "register_ajax.php?user=" + username.value, true);
+	ajaxRequest.send();
 }
 
 function validatePassword(other) {
