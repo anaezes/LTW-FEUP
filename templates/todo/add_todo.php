@@ -1,4 +1,5 @@
 <script src="javascript/addtodo.js" defer></script>
+<script src="javascript/scriptdatalist.js" defer></script>
 <link rel="stylesheet" href="css/style.css">
 <div class="todo">
 
@@ -7,7 +8,8 @@
     <form action="action_addTodo.php" method="POST">
       <p class="field">
         <label for="title"> Title </label>
-        <input type="text" id="title" name="title" required />
+        <input type="text" id="title" name="title" list="json-datalist" placeholder="Choose Title..." required />
+        <datalist id="json-datalist"></datalist>
         <span class="hint">First letter must be Uppercase. At least 2 characters.</span>
         <br>
         <br>

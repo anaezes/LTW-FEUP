@@ -10,6 +10,7 @@ $categories = getAllCategories($_SESSION['username']);
 $todos = getListToDos($_SESSION['username']);
 
 include_once('templates/category/list_categories.php');
+include_once('templates/user/view_user.php');
 include_once('templates/todo/list_todos.php');
 
 if(!(isset($_SESSION['username']) && $_SESSION != ''))
