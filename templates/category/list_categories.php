@@ -62,19 +62,17 @@
 </div>
 
 <div class="user">
-  <table>
-    <col width="70">
-    <tr>
-      <th rowspan="3">  
-        <?php echo '<img src="img/'.$_SESSION['username'].'.png" width="60" height="60">'; ?> </th>
-        <th colspan="2">  <?php echo $_SESSION['usr_name']; ?> </th>
-      </tr>
-
-      <tr>
-        <th> <a id="confIcon" href="edit_profile.php"><i class="fa fa-cog" aria-hidden="true"></i></a> </th>
-        <th> <a href="action_logout.php" >Log Out</a> </th>
-      </tr>
-    </table>
+  <div class="photo">  
+        <?php echo '<img src="img/'.$_SESSION['username'].'.png" width="60" height="60">'; ?>
+      </div>
+      <div class="nameuser">
+        <th colspan="2">  <?php echo $_SESSION['username']; ?> </th>
+      </div>
+      <div class="setuser">
+        <a id="confIcon" href="edit_profile.php"><i class="fa fa-cog" aria-hidden="true"></i></a> 
+        <a href="action_logout.php" >Log Out</a> 
+      
+      </div>
   </div>
 
 </div>

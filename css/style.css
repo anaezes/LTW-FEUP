@@ -14,26 +14,17 @@ body > header {
 }
 
 .lateral .user{
-    text-align: left;
-    margin: 4% 0px 0px 6% ;
+    text-align: center;
+    margin: 4% 0% 0% 6% ;
     padding-top: 10%;
     border-top: 2px solid #696969;
-}
-
-.lateral .user > table{
-    border-top: 1%;
+    color: #696969;
 }
 
 .lateral .user a{
     text-decoration: none;
     color: #696969;
-}
-
-.logout a {
-    text-decoration: none;
-    color: #696969;
     font-weight: bold;
-    font-size: 16px;
 }
 
 .categories h2{
@@ -94,7 +85,7 @@ body > header {
 
 .todo div {
     border-radius: 5px;
-    width: 100%;
+    width: 90%;
 }
 
 .todos {
@@ -104,13 +95,12 @@ body > header {
 
 
 .todos > article:nth-child(n){
-
     border-radius: 5px;
     border: 1px solid #c8c8ce;
     padding-left: 2%;
     margin-bottom: 0.5%;
     height: 145px; 
-    width: 87%;
+    width: 100%;
 }
 .todos:nth-child(n) .name {
     font-size: 20px;
@@ -142,8 +132,8 @@ body > header {
 
 .todos ul{
   list-style:none;
-  text-align: center;
-  margin-left: 60%;
+  text-align: right;
+  margin-left: 40%;
 }
 
 .todos ul li{
@@ -158,7 +148,7 @@ body > header {
 }
 
 .todo .add {
-    width: 83.5%;
+    width: 87.5%;
     background-color: #45a049; 
     border: none;
     padding: 1.5% 2.5%;
@@ -334,7 +324,7 @@ input[type=text], input[type=password], select {
 
 .addtodo{
     /* Size & position */
-    width: 85%;
+    width: 70%;
     height: 475px;
     position: relative; 
     color: white;
@@ -355,17 +345,22 @@ input[type=text], input[type=password], select {
 }
 
 .addtodo .field {
-    padding-left: 20px;
+    padding-left: 2%;
     position: center; 
     width: 120%;
 }
 
 .addtodo  .description{
-    padding-left: 20px;
-    width: 120%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 118%;
+}
+
+#dateofactivitylabel{
+   padding: 2%;
 }
 #dateofactivity {
-    padding-left: 20px;
+    padding-left: 2%;
 }
 
 
@@ -381,20 +376,13 @@ input[type=text], input[type=password], select {
 .regBottons input[type=submit], .regBottons input[type=reset],
 .addToDoBottons input[type=submit], input[type=reset] {
     width: 40%;
-    margin-right: 10px; 
-}
-
-.regBottons input[type=submit], .regBottons input[type=reset],
-.addToDoBottons input[type=submit], input[type=reset] {
-    width: 40%;
     background-color: #4CAF50;
     color: white;
-    padding: 16px 20px;
+    padding: 1.8% 2%;
     border: none;
     border-radius: 4px;
     box-shadow: 10px 10px 5px #555555;
-    cursor: pointer;
-    font-size: 16px;  
+    cursor: pointer;  
 }
 
 .regBottons input[type=submit]:hover, input[type=reset]:hover,

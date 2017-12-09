@@ -27,19 +27,17 @@
             </textarea>
           </p>
 
-          <label id="dateofactivity" for="dateofactivity">Date Of Activity</label>
+          <label id="dateofactivitylabel" for="dateofactivity">Date </label>
           <input type="date" name="dateofactivity" id="dateofactivity"/>
 
           
           <div class="addToDoBottons">
             <ul>
               <input type = "submit" value="Add"/>
-              <input type = "reset" value="Cancel"/>
+              <input type = "reset" value="Cancel" 
+              onclick="window.location='index.php';return false;" />
             </ul>
-
           </div>
-
-
         </p>
 
       </div>
