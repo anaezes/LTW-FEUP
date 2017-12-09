@@ -1,11 +1,11 @@
+<script src="javascript/addtodo.js" defer></script>
 <div class="todo">
-<div class="edittodo">
-
-      <div class="addtodo">
+  <div class="addtodo">
     <form action="action_editTodo.php?id=<?=$todo_id?>" method="POST">
       <p class="field">
         <label for="title"> New title </label>
-        <input type="text" id="title" name="title" value="<?php echo $todo_name ?>" />
+        <input type="text" id="title" name="title" value="<?php echo $todo_name ?>" required />
+        <span class="hint">First letter must be Uppercase. At least 2 characters.</span>
         <br>
         <br>
       </p>
@@ -26,12 +26,12 @@
             <br>     
           <label id="descrip" for="description">New description</label>
           <p class="description">
-            <textarea name="description" id="description"> <?php echo $todo_description ?>
+            <textarea name="description" id="description" required > <?php echo $todo_description ?>
             </textarea>
           </p>
 
           <label id="dateofactivitylabel" for="dateofactivity">New date </label>
-          <input type="date" name="dateofactivity" id="dateofactivity" value="<?php echo $todo_date ?>"/> 
+          <input type="date" name="dateofactivity" id="dateofactivity" value="<?php echo $todo_date ?>" required />
 
           
           <div class="addToDoBottons">

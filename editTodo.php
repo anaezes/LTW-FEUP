@@ -16,6 +16,7 @@ $todo_description = $todo['td_description'];
 $todo_date = $todo['td_date'];
 
 include_once('templates/category/list_categories.php');
+include_once('templates/user/view_user.php');
 include_once('templates/todo/edit_todo.php');
 
 if(!(isset($_SESSION['username']) && $_SESSION != ''))
