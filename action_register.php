@@ -14,6 +14,18 @@
 	$final_dest = 'img/' . $username . '.png';
 	
 	
+	preg_match('/^[a-z]{3,}$/', $username, $matches);
+	
+	if(!empty($matches))
+	{
+		print_r($matches);
+	}
+	else
+	{
+		header('location:register_user.php');
+		exit();;
+	}
+	
 	if(!($username == '' || $password == '' || $passwordr == '' || $name == '' || $file_name == ''))
 	{
 		if($file_size < 500000 && $file_type == 'image/png')
