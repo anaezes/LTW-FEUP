@@ -33,6 +33,5 @@
 	
 	//updatePassUser($username, $password);
 	//update($username, $name, $photo);
-	cena();
-	
+	cena(); 	
 ?>

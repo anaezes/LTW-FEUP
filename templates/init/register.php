@@ -5,9 +5,7 @@
 					<p class="field">
 						<label for="iuser"> Username: </label>
 						<input type="text" id="iuser" name="username" required />
-						<span class="hint">Only lowercase, at least 3 characters</span>
-						<br>
-						<span id="msg"></span>
+						<span id="msg" class="hint">Only lowercase, at least 3 characters</span>
 						<br>
 						<br>
 					</p>
