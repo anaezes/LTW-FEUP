@@ -9,7 +9,7 @@
       <p class="field">
         <label for="title"> Title </label>
         <input type="text" id="title" name="title" required />
-        <span class="hint">Please, type a valid Title: First letter must be Uppercase.</span>
+        <span class="hint">First letter must be Uppercase. At least 2 characters.</span>
         <br>
         <br>
       </p>
