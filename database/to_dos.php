@@ -26,9 +26,26 @@ function createToDo($username, $category, $title, $description, $td_date)
 	return $stmt->fetch() !== false;
 }
 
-function updateToDos($username, $id_cat, $id_todo, $name, $description, $date)
+function updateToDo($username, $id ,$cat, $title, $description, $td_date)
 {
-
+	global $dbh;
+	$stmt = $dbh->prepare('UPDATE todo SET 
+		cat_name = :cat,
+		td_name = :name,
+		td_description = :description,
+		td_date = :td_date
+		WHERE td_id = :id 
+		AND usr_username LIKE :username');
+	$stmt->execute([
+		':username' => $username,
+		':id' => $id,
+		':cat' => $cat,
+		':name' => $title,
+		':description' => $description,
+		':td_date' => $td_date,
+	]);
+	
+	return $stmt->fetch() !== false;
 }
 
 function deleteToDo($username, $td_id) {
@@ -52,6 +69,17 @@ function changeCheckTodo($username, $td_id, $check_value) {
 	]);
 	return $stmt->fetch() !== false;
 
+}
+
+function getOneTodo($username, $td_id) {
+	global $dbh;
+	$stmt = $dbh->prepare("SELECT * FROM todo WHERE usr_username LIKE :username AND td_id = :td_id");
+	$stmt->execute([
+		':username' => $username,
+		':td_id' => $td_id,
+	]);
+
+	return $stmt->fetchAll();
 }
 
 ?>
