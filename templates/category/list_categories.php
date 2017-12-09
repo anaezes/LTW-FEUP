@@ -17,7 +17,7 @@
               <form action="action_addCat.php" method="POST">
                <p class="field">
                 <label for="category"> Category  </label>
-                <input type="text" id="NewCat" name="NewCategory"/>
+                <input type="text" id="NewCat" name="NewCategory" required /> 
                 <label for="Color"> Choose color &nbsp   </label>
                 <input name="Color" type="color"/>
                 <br>

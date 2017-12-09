@@ -1,4 +1,10 @@
 
+let category = document.querySelector('.addCat input[name=NewCategory]');
+category.addEventListener('keyup', validateCategory, false);
+
+let catform = document.querySelector('.addCat form');
+catform.addEventListener('submit', validateCat, false);
+
 // Get the modal
 var modal = document.getElementById('myModal');
 
@@ -52,3 +58,20 @@ function selectCat(event){
 
  }
 }
+
+function validateCategory() {
+  if (/^[A-Z][A-Za-z0-9_-]{1,19}$/.test(this.value)){
+    this.classList.remove('invalid');
+  }
+  else
+    this.classList.add('invalid');
+}
+
+
+function validateCat(event) {
+  let inputs = this.querySelectorAll('input');
+  for (let i = 0; i < inputs.length; i++)
+    if (inputs[i].classList.contains('invalid'))
+     event.preventDefault();
+}
+

@@ -4,7 +4,6 @@
 
   <div class="addtodo">
 
-
     <form action="action_addTodo.php" method="POST">
       <p class="field">
         <label for="title"> Title </label>
