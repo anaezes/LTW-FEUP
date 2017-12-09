@@ -91,6 +91,14 @@ body > header {
     line-height: 8px;
 }
 
+.friends{
+      position: relative;
+    margin-top: 1%;
+    float: right;
+    width: 80%;
+    line-height: 8px;
+}
+
 .todo div {
     border-radius: 5px;
     width: 90%;

@@ -27,12 +27,6 @@ CREATE TABLE user_cat (
   PRIMARY KEY (cat, usr)
 );
 
-CREATE TABLE friends_with (
-  usr_1 VARCHAR REFERENCES user NOT NULL,
-  usr_2 VARCHAR REFERENCES user NOT NULL,
-  PRIMARY KEY (usr_1, usr_2)
-);
-
 
 INSERT INTO category VALUES ('Home', '#000080');--blue 
 INSERT INTO category VALUES ('Work', '#800000'); --brown 
@@ -119,35 +113,5 @@ INSERT INTO todo VALUES (NULL,
   0
 );
 
-
-INSERT INTO friends_with VALUES(
-'jonsnow', 
-'danny'
-);
-
-INSERT INTO friends_with VALUES(
-'danny',
-'jonsnow'
-);
-
-INSERT INTO friends_with VALUES(
-'jonsnow', 
-'tyrion'
-);
-
-INSERT INTO friends_with VALUES(
-'tyrion',
-'jonsnow'
-);
-
-INSERT INTO friends_with VALUES(
-'danny',
-'tyrion'
-);
-
-INSERT INTO friends_with VALUES(
-'tyrion',
-'danny'
-);
 
 --sqlite data.db < data.sql
