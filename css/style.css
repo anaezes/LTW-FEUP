@@ -545,6 +545,16 @@ form input.invalid + .hint{
   visibility: visible;
 }
 
+form textarea.invalid {
+  border: 1px solid red;
+  box-shadow: red 0 0 2px 2px;
+}
+
+form textarea.invalid + .hint{
+  visibility: visible;
+}
+
+
 form .hint {
   font-size: 0.6em;
   padding: 0.5em;
