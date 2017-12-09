@@ -11,22 +11,38 @@ let register = document.querySelector('.form-1 form');
 register.addEventListener('submit', validateRegister, false);
 
 function validateUsername() {
-  if (!/^[a-z]{3,}$/.test(this.value)){
-    this.classList.add('invalid');
-  }
-  else
-  {
-    this.classList.remove('invalid');
-  }
-
+	
 	let ajaxRequest = new XMLHttpRequest();
 	ajaxRequest.onreadystatechange = function()
 	{
 		if(ajaxRequest.readyState == 4 && ajaxRequest.status == 200)
 		{
-			msg.innerHTML = ajaxRequest.responseText;
+			let obj = JSON.parse(ajaxRequest.responseText);
+			if(!/^[a-z]{3,}$/.test(username.value))
+			{
+				username.classList.add('invalid');
+				msg.innerHTML = 'Only lowercase, at least 3 characters';
+			}
+			else if(obj.existe)
+			{
+				username.classList.add('invalid');
+				msg.innerHTML = obj.string;
+			}
+			else
+			{
+				username.classList.remove('invalid');
+			}
 		}
-	}
+	};
+	
+	// if (!/^[a-z]{3,}$/.test(this.value)){
+	// this.classList.add('invalid');
+	// }
+	// else
+	// {
+	// this.classList.remove('invalid');
+	// }
+
 
 	ajaxRequest.open("GET", "register_ajax.php?user=" + username.value, true);
 	ajaxRequest.send();

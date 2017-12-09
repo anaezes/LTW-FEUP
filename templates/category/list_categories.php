@@ -17,7 +17,7 @@
               <form action="action_addCat.php" method="POST">
                <p class="field">
                 <label for="category"> Category  </label>
-                <input type="text" id="NewCat" name="NewCategory"/>
+                <input type="text" id="NewCat" name="NewCategory" required /> 
                 <label for="Color"> Choose color &nbsp   </label>
                 <input name="Color" type="color"/>
                 <br>
@@ -62,7 +62,7 @@
 </div>
 
 <div class="user">
-  <div class="photo">  
+      <div class="photo">  
         <?php echo '<img src="img/'.$_SESSION['username'].'.png" width="60" height="60">'; ?>
       </div>
       <div class="nameuser">
@@ -71,7 +71,6 @@
       <div class="setuser">
         <a id="confIcon" href="edit_profile.php"><i class="fa fa-cog" aria-hidden="true"></i></a> 
         <a href="action_logout.php" >Log Out</a> 
-      
       </div>
   </div>
 

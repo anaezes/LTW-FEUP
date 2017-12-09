@@ -3,16 +3,27 @@
 	include_once('database/user.php');
 	
 	$u = $_GET['user'];
+	// $Obj->existe = false;
+	// $Obj->string = '';
+
+	$obj = array(
+		"existe" => false, 
+		"string" => "",
+		);
 	
-	try
+	
+	if(getUserData($u))
 	{
-		if(getUserData($u))
-		{
-			echo 'Ja existe!';
-		}
+		$obj['existe'] = true;
+		$obj['string'] = 'This username already exists!';
+		$json = json_encode($obj);
+		echo $json;
 	}
-	catch(Exception $e)
+	else
 	{
-		echo '';
+		$obj['existe'] = false;
+		$obj['string'] = '';
+		$json = json_encode($obj);
+		echo $json;
 	}
 ?>
