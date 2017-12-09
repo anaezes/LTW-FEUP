@@ -2,17 +2,15 @@
 	include_once('includes/init.php');
 	include_once('database/user.php');
 	
-	$u = $_GET['user'];
-	// $Obj->existe = false;
-	// $Obj->string = '';
+	$cuser = $_GET['user'];
 
 	$obj = array(
 		"existe" => false, 
 		"string" => "",
 		);
 	
-	
-	if(getUserData($u))
+	$data = getUserData($cuser);
+	if(!empty($data))
 	{
 		$obj['existe'] = true;
 		$obj['string'] = 'This username already exists!';

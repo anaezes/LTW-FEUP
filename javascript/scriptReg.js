@@ -34,15 +34,6 @@ function validateUsername() {
 			}
 		}
 	};
-	
-	// if (!/^[a-z]{3,}$/.test(this.value)){
-	// this.classList.add('invalid');
-	// }
-	// else
-	// {
-	// this.classList.remove('invalid');
-	// }
-
 
 	ajaxRequest.open("GET", "register_ajax.php?user=" + username.value, true);
 	ajaxRequest.send();

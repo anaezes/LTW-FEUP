@@ -16,11 +16,7 @@
 	
 	preg_match('/^[a-z]{3,}$/', $username, $matches);
 	
-	if(!empty($matches))
-	{
-		print_r($matches);
-	}
-	else
+	if(empty($matches))
 	{
 		header('location:register_user.php');
 		exit();;
@@ -48,10 +44,10 @@
 		exit();
 	}
 	
-	if(isLoginCorrect($_POST['username'], $_POST['password']))
+	if(isLoginCorrect($username, $password))
 	{
-		setCurrentUser($_POST['username']);
-		$data = getUserData($_POST['username']);
+		setCurrentUser($username);
+		$data = getUserData($username);
 		$_SESSION['usr_name'] = $data[0]['usr_name'];
 		if(addFirstCategories($username)){
 			header('location:register_user.php');

@@ -13,9 +13,8 @@ function getUserData($username)
 	global $dbh;
 	$stmt = $dbh->prepare('SELECT * FROM user WHERE usr_username = ?');
 	$stmt->execute(array($username));
-	return $stmt->fetch() !== false;
-	// $data = $stmt->fetchAll();
-	// return $data;
+	$data = $stmt->fetchAll();
+	return $data;
 }
 
 function createUser($username, $password, $name)
