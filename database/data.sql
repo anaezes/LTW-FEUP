@@ -36,17 +36,17 @@ INSERT INTO category VALUES ('Leisure', '#D2691E'); -- dark orange
 INSERT INTO category VALUES ('Beauty', '#800080'); --purple
 INSERT INTO category VALUES ('Other', '#696969'); --grey 
 
-INSERT INTO user VALUES('john', 'johnSn1#', 'Kit Harrigton');
+INSERT INTO user VALUES('jonsnow', 'jonsnowSno1#', 'Kit Harrigton');
 INSERT INTO user VALUES('danny', 'dannyTa1#', 'Emilia Clarke');
 INSERT INTO user VALUES('tyrion','tyrionLa1#', 'Peter Dinklage');
 
-INSERT INTO user_cat VALUES ('Home','john');
-INSERT INTO user_cat VALUES ('Work','john');
-INSERT INTO user_cat VALUES ('Finances','john');
-INSERT INTO user_cat VALUES ('Sport','john');
-INSERT INTO user_cat VALUES ('Leisure','john');
-INSERT INTO user_cat VALUES ('Beauty','john');
-INSERT INTO user_cat VALUES ('Other','john');
+INSERT INTO user_cat VALUES ('Home','jonsnow');
+INSERT INTO user_cat VALUES ('Work','jonsnow');
+INSERT INTO user_cat VALUES ('Finances','jonsnow');
+INSERT INTO user_cat VALUES ('Sport','jonsnow');
+INSERT INTO user_cat VALUES ('Leisure','jonsnow');
+INSERT INTO user_cat VALUES ('Beauty','jonsnow');
+INSERT INTO user_cat VALUES ('Other','jonsnow');
 
 INSERT INTO user_cat VALUES ('Home','danny');
 INSERT INTO user_cat VALUES ('Work','danny');
@@ -71,7 +71,7 @@ INSERT INTO todo VALUES (NULL,
   'Computer network class',
   '2017-11-23',
   'Work',
-  'john',
+  'jonsnow',
   0
 );
 
@@ -80,7 +80,7 @@ INSERT INTO todo VALUES (NULL,
   'Make project for ltw class',
   '2017-12-10',
   'Work',
-  'john',
+  'jonsnow',
   1
 );
 
@@ -89,7 +89,7 @@ INSERT INTO todo VALUES (NULL,
   'Pay the tax on finances.',
   '2017-11-31',
   'Finances',
-  'john',
+  'jonsnow',
   0
 );
 
