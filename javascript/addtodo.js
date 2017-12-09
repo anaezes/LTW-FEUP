@@ -8,7 +8,7 @@ let register = document.querySelector('.addtodo form');
 register.addEventListener('submit', validateTodo, false);
 
 function validateTitle() {
-  if (/^[A-Z][A-Za-z0-9_-]{3,19}$/.test(this.value)){
+  if (/^[A-Z][A-Za-z0-9_-]{1,19}$/.test(this.value)){
     this.classList.remove('invalid');
   }
   else
@@ -16,7 +16,7 @@ function validateTitle() {
 }
 
 function validateTextArea() {
-  if (/^[A-Z][A-Za-z0-9_-]{3,19}$/.test(this.value)){
+  if (/^[A-Z][A-Za-z0-9_-]{1,19}$/.test(this.value)){
     this.classList.remove('invalid');
   }
   else
