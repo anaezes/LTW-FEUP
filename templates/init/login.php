@@ -18,8 +18,8 @@
 					
 					<div class="regBottons">
 						<ul>
-							<input type = "submit" value="Entrar"/>
-							<input type = "reset" value="Limpar"/>
+							<input type = "submit" value="Login"/>
+							<input type = "reset" value="Reset"/>
 						</ul>
 						<!--<a id="reg" href="registar.php">REGISTAR</a>-->
 					</div>

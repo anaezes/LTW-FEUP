@@ -235,7 +235,7 @@ input[type=text], input[type=password], select {
 
 /*Bottons in first page */
 .startButtons {
-    top:20%;
+    top:10%;
     right:20%;
     text-align: center;
     position:absolute;
@@ -280,13 +280,18 @@ input[type=text], input[type=password], select {
 
 /*image background */
 #bg {
-  width:100%;
-  position: fixed; 
-  padding-top: 2.5%;
-  top: 0; 
-  left: 0; 
+ width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1; 
   opacity: 0.75;
+}
 
+#bg .stretch {
+    width:100%;
+    height:100%;
 }
 
 
@@ -413,7 +418,9 @@ input[type=text], input[type=password], select {
 }
 
 .regBottons input[type=submit]:hover, input[type=reset]:hover,
-.addToDoBottons input[type=submit]:hover, input[type=reset]:hover{
+.addToDoBottons input[type=submit]:hover, input[type=reset]:hover,
+.editButtons input[type=submit]:hover, input[type=reset]:hover
+{
     background-color: #555555;
 }
 
