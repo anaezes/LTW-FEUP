@@ -4,6 +4,7 @@ include_once('includes/init.php');
 include_once('database/category.php');
 include_once('database/to_dos.php');
 include_once('templates/common/header.php');
+include_once('templates/common/logo.php');
 
 $categories = getAllCategories($_SESSION['username']);
 $todos = getListToDos($_SESSION['username']);

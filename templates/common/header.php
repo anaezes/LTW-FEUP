@@ -22,9 +22,3 @@ if(!isset($_SESSION['username']))
 </head>
 
 <body>
-
-  <header>
-    <div id="info">
-      <img src="images/logo2_s.png">
-    </div>
-  </header>

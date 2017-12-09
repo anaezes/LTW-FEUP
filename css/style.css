@@ -83,6 +83,14 @@ body > header {
     line-height: 8px;
 }
 
+#editProfile {
+      position: relative;
+    margin-top: 1%;
+    float: right;
+    width: 80%;
+    line-height: 8px;
+}
+
 .todo div {
     border-radius: 5px;
     width: 90%;
@@ -369,6 +377,12 @@ input[type=text], input[type=password], select {
  margin-right: 40px;
 }
 
+.editButtons{
+ text-align: right; 
+ margin-right: 18%;
+}
+
+
 .addToDoBottons ul {
     margin-top: 0px;
 }
@@ -383,6 +397,19 @@ input[type=text], input[type=password], select {
     border-radius: 4px;
     box-shadow: 10px 10px 5px #555555;
     cursor: pointer;  
+}
+
+.editButtons input[type=submit], .editButtons input[type=reset] 
+{
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.8% 2%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 10px 10px 5px #555555;
+    cursor: pointer;  
+    margin-left: 2%;
 }
 
 .regBottons input[type=submit]:hover, input[type=reset]:hover,
