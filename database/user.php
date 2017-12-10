@@ -87,5 +87,4 @@ function addFirstCategories($username) {
 
 	return $stmt->fetch() !== false;
 }
-
 ?>

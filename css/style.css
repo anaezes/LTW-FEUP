@@ -481,7 +481,7 @@ input[type=text], input[type=password], select {
 /*page login */
 
 /* The Modal (background) */
-.modal {
+.modal, .modal2 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -496,7 +496,7 @@ input[type=text], input[type=password], select {
 }
 
 /* Modal Content */
-.modal-content {
+.modal-content, .modal2-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -506,22 +506,22 @@ input[type=text], input[type=password], select {
     text-align: left;
 }
 
-.modal-content .addCat .field {
+.modal-content .addCat .field, .modal2-content .addFriend .field  {
     position: center; 
     width: 90%;
     display: inline-block;
 }
 
 /* The Close Button */
-.close {
+.close, .close2{
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus,
+.close2:hover, .close2:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
