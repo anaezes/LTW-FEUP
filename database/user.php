@@ -3,9 +3,17 @@
 function isLoginCorrect($username, $password) 
 {
 	global $dbh;
-	$stmt = $dbh->prepare('SELECT * FROM user WHERE usr_username = ? AND usr_password = ?');
-	$stmt->execute(array($username, $password));
-	return $stmt->fetch() !== false;
+	$stmt = $dbh->prepare('SELECT * FROM user WHERE usr_username = ?');
+	$stmt->execute(array($username));
+	$user = $stmt->fetch();
+	if ($user !== false && password_verify($password, $user['usr_password'])) 
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 function getUserData($username)
@@ -19,13 +27,14 @@ function getUserData($username)
 
 function createUser($username, $password, $name)
 {
+	$options = ['cost' => 12];
 	global $dbh;
 	try
 	{
 		$stmt = $dbh->prepare('INSERT INTO user VALUES(:user, :pass, :name)');
 		$stmt->execute([
 			':user' => $username,
-			':pass' => $password,
+			':pass' => password_hash($password, PASSWORD_DEFAULT, $options),
 			':name' => $name,
 		]);
 		return $stmt->fetch() !== false;
@@ -51,11 +60,12 @@ function updateUser($username, $name)
 
 function updatePassUser($username, $password)
 {
+	$options = ['cost' => 12];
 	global $dbh;
 	$stmt = $dbh->prepare('UPDATE user SET usr_password = :pass WHERE usr_username = :user');
 	$stmt->execute([
 		':user' => $username,
-		':pass' => $password,
+		':pass' => password_hash($password, PASSWORD_DEFAULT, $options),
 	]);
 	return $stmt->fetch() !== false;
 }

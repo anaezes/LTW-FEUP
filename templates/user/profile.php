@@ -6,13 +6,12 @@
       </div>
 	  <br>
 	  <div class="nameuser">
-        <h2>  <?php echo $_SESSION['username']; ?> </h2>
+        <h2>username:<?php echo $_SESSION['username']; ?> </h2>
         <br>
-		<h1>  <?php echo $_SESSION['usr_name']; ?> </h1>
+		<h1>Name:  <?php echo $_SESSION['usr_name']; ?> </h1>
       </div>
 	  <div class="editButtons">
 		<ul>
-
 			<button class="buttonFriend" id="friendTodos" onclick="window.location.href='/edit_profile.php'"> Edit Profile </button>
 
 			<button class="buttonFriend" id="friendTodos" onclick="window.location.href='/index.php'"> Return </i> </button>
