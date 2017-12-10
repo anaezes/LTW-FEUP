@@ -92,11 +92,21 @@ body > header {
 }
 
 .friends{
-      position: relative;
+    position: relative;
     margin-top: 1%;
     float: right;
     width: 80%;
-    line-height: 8px;
+    height: 200px;
+
+}
+
+.friend{
+display: inline-block;
+margin-right: 2%;
+}
+
+.friend p {
+text-align: center;
 }
 
 .todo div {
