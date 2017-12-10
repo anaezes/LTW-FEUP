@@ -4,14 +4,11 @@ title.addEventListener('keyup', validateTitle, false);
 let textarea = document.querySelector('.addtodo textarea[name=description]');
 textarea.addEventListener('keyup', validateTextArea, false);
 
-let addsometodo = document.querySelector('.addtodo form');
-addsometodo.addEventListener('submit', validateTodo, false);
-
-let descripttext = document.querySelector('.addtodo form');
-descripttext.addEventListener('submit', validateTodoDescript, false);
+let register = document.querySelector('.addtodo form');
+register.addEventListener('submit', validateTodo, false);
 
 function validateTitle() {
-  if (/^\w+( +\w+)*$/.test(this.value)){
+  if (/^[A-Z][A-Za-z0-9_-]{1,19}$/.test(this.value)){
     this.classList.remove('invalid');
   }
   else
@@ -19,7 +16,7 @@ function validateTitle() {
 }
 
 function validateTextArea() {
-  if (/^[a-zA-Z0-9._-]+( [a-zA-Z0-9._-]+)*$/.test(this.value)){
+  if (/^[A-Z][A-Za-z0-9_-]{1,19}$/.test(this.value)){
     this.classList.remove('invalid');
   }
   else
@@ -33,11 +30,3 @@ function validateTodo(event) {
     if (inputs[i].classList.contains('invalid'))
      event.preventDefault();
 }
-
-
-function validateTodoDescript(event) {
-  let textareas = this.querySelectorAll('textarea');
-  for (let j = 0; j < textareas.length; j++)
-    if (textareas[j].classList.contains('invalid'))
-     event.preventDefault();
-  }
