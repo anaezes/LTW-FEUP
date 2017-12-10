@@ -36,7 +36,7 @@ function shareTodo(event, todo_id) {
       type: 'POST',             
       data: {todo_id: todo_id, friend: friend},
       error: function (request, error) {
-        alert("já partilhado!!!!");
+        alert("Already shared!");
     },
    });  
   }
