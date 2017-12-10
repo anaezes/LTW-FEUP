@@ -9,6 +9,8 @@
         <a id="confIcon" href="view_profile.php"><i class="fa fa-cog" aria-hidden="true"></i></a> 
         <a href="action_logout.php" >Log Out</a> 
       </div>
+      <div class="viewFriends">
+        <a href="friends.php"> Friends </i></a> 
+      </div>
   </div>
-
 </div>
