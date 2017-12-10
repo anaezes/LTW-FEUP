@@ -1,20 +1,23 @@
 <link rel="stylesheet" href="css/style.css">
-<div class="todo">
+<div class="profile">
 	<h1>Profile</h1>
-	 <div class="photo">  
-        <?php echo '<img src="img/'.$_SESSION['username'].'.png" width="200" height="200">'; ?>
-      </div>
-	  <br>
-	  <div class="nameuser">
-        <h2>username:<?php echo $_SESSION['username']; ?> </h2>
-        <br>
-		<h1>Name:  <?php echo $_SESSION['usr_name']; ?> </h1>
-      </div>
-	  <div class="editButtons">
+	<br> <br>
+	<ul> 
+		<li>
+			<?php echo '<img src="img/'.$_SESSION['username'].'.png" width="200" height="200">'; ?>
+		</li>
+		<li>
+			<h2>  <?php echo $_SESSION['username']; ?> </h2>
+
+			<h1>  <?php echo $_SESSION['usr_name']; ?> </h1>
+		</li>
+	</ul>
+	<div class="editButtons">
+
 		<ul>
 			<button class="buttonFriend" id="friendTodos" onclick="window.location.href='/edit_profile.php'"> Edit Profile </button>
 
 			<button class="buttonFriend" id="friendTodos" onclick="window.location.href='/index.php'"> Return </i> </button>
 		</ul>
-	  </div>
+	</div>
 </div>

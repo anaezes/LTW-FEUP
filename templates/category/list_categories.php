@@ -13,12 +13,13 @@
           <!-- Modal content -->
           <div class="modal-content">
             <span class="close">&times;</span>
+            <label> Add Category </label>
             <div class="addCat">
               <form action="action_addCat.php" method="POST">
                <p class="field">
-                <label for="category"> Category  </label>
+                <label for="category"> Name:  </label>
                 <input type="text" id="NewCat" name="NewCategory" required /> 
-                <label for="Color"> Choose color &nbsp   </label>
+                <label for="Color"> Color: &nbsp   </label>
                 <input name="Color" type="color"/>
                 <br>
               </p>				

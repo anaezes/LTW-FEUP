@@ -548,7 +548,8 @@ input[type=text], input[type=password], select {
     overflow-y: auto;
 }
 
-.modal-content3 > label 
+.modal-content > label,
+.modal-content3 > label
 {
     font-size: 20px;
     font-weight: bold;
@@ -683,6 +684,26 @@ form .hint {
 
 .dropdown:hover{
     background-color: #3e8e41;
+}
+
+.profile {
+    position: relative;
+    margin-top: 1%;
+    float: right;
+    width: 40%;
+    line-height: 8px;
+    background-color: #f1f1f1;
+    padding-left: 25px;
+    margin-right: 40%;
+}
+
+.profile > h1{
+    color: #3e8e41;
+    margin-bottom: 20px;
+}
+
+.profile > ul > li{
+display: inline-block;
 }
 
 </style>

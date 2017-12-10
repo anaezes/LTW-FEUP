@@ -19,10 +19,11 @@
  				<!-- Modal content -->
  				<div class="modal-content">
  					<span class="close2">&times;</span>
+ 					<label> Add Friend </label>
  					<div class="addFriend">
  						<form action="action_addFriend.php" method="POST">
  							<p class="field">
- 								<label for="users">Users</label>
+ 								<label for="users">List Users:</label>
  								<select id="friend" name="friend">
  									<?php foreach ($users as $user) { ?>
  										<li>
