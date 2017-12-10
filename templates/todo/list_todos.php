@@ -13,7 +13,7 @@
       $todo_date = $todo['td_date'];
       ?>
       <article class="dynamic-content" id="<?=$todo_cat?><?=$todo_id?>" 
-      <?php 
+        <?php 
         if($todo['td_check'] == 1)
          echo "<body style='background-color:#F8F8FF'>";
        else if($todo['td_date'] < (new \DateTime())->format('Y-m-d'))
@@ -34,15 +34,25 @@
         </form>
       </li>
       <li>  
-         <a href="editTodo.php?id=<?=$todo_id?>" > <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-      </li>
-      <li> 
-        <a href="#" onclick="deleteTodo(event, <?=$todo_id?>)" > <i  class="fa fa-trash-o"></i> </a>
-      </li>
-    </ul>
+       <a href="editTodo.php?id=<?=$todo_id?>" > <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+     </li>
+     <li>
+       <div class="dropdown" >
+        <button class="dropbtn"> <i class="fa fa-share-alt" aria-hidden="true"></i> </button>
+        <div class="dropdown-content" style="left:0;">
+                  <?php foreach ($friends as $friend) { ?>
+                      <a href="#" onclick="shareTodo(event, <?=$todo_id?>)" id="<?=$friend['usr_2']?>"><?=$friend['usr_2']?> </a>
+                      <?php } ?>
+        </div>
+      </div>
+    </li>
+    <li> 
+      <a href="#" onclick="deleteTodo(event, <?=$todo_id?>)" > <i  class="fa fa-trash-o"></i> </a>
+    </li>
+  </ul>
 
-  </article>
-  <?php 
+</article>
+<?php 
 } ?>
 </div>
 

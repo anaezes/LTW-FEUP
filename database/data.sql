@@ -149,13 +149,6 @@ INSERT INTO friends_with VALUES(
 
 INSERT INTO shared_with VALUES(
 'jonsnow',
-1, 
-'danny'
-);
-
-
-INSERT INTO shared_with VALUES(
-'jonsnow',
 2, 
 'danny'
 );

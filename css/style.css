@@ -73,8 +73,6 @@ body > header {
     color: white; 
 }
 
-
-
 .todo {
     position: relative;
     margin-top: 1%;
@@ -504,7 +502,7 @@ input[type=text], input[type=password], select {
 /*page login */
 
 /* The Modal (background) */
-.modal, .modal2, .modal3{
+.modal, .modal2, .modal3, .modal4{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -644,5 +642,47 @@ form .hint {
   visibility: hidden;
 }
 
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: Transparent;
+    border: none;
+    cursor: pointer;
+     border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover{
+    background-color: #3e8e41;
+}
 
 </style>

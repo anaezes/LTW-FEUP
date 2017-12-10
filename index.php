@@ -9,6 +9,7 @@ include_once('templates/common/logo.php');
 
 $categories = getAllCategories($_SESSION['username']);
 $todos = getListToDos($_SESSION['username']);
+$friends = getListFriends($_SESSION['username']);
 
 include_once('templates/category/list_categories.php');
 include_once('templates/user/view_user.php');

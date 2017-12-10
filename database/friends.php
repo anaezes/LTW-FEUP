@@ -24,13 +24,13 @@ function getAllUsers($username) {
 function addFriend($username, $friend) {
 
   global $dbh;
-  $stmt = $dbh->prepare('INSERT INTO friends_with VALUES(:username, :friend)');
+  $stmt = $dbh->prepare('INSERT OR IGNORE INTO friends_with VALUES(:username, :friend)');
   $stmt->execute([
     ':username' => $username,
     ':friend' => $friend, 
   ]);
 
-  $stmt = $dbh->prepare('INSERT INTO friends_with VALUES(:friend, :username)');
+  $stmt = $dbh->prepare('INSERT OR IGNORE INTO friends_with VALUES(:friend, :username)');
   $stmt->execute([
     ':friend' => $friend, 
     ':username' => $username,
@@ -48,6 +48,19 @@ function getSharedTodos($username) {
 		GROUP BY todo_id");
 	$stmt->execute([
 		':username' => $username,
+	]);
+
+	return $stmt->fetchAll();
+}
+
+function shareTodo($username, $todo_id, $friend) {
+	global $dbh;
+	$stmt = $dbh->prepare('INSERT OR IGNORE INTO shared_with VALUES(:username, :todo_id, :friend)');
+	$stmt->execute([
+		':username' => $username,
+		':todo_id' => $todo_id,
+		':friend' => $friend,
+		
 	]);
 
 	return $stmt->fetchAll();
