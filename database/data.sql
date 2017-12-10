@@ -33,6 +33,13 @@ CREATE TABLE friends_with (
   PRIMARY KEY (usr_1, usr_2)
 );
 
+CREATE TABLE shared_with (
+  usr_1 VARCHAR REFERENCES user NOT NULL,
+  todo_id INTEGER REFERENCES todo NOT NULL,
+  usr_2 VARCHAR REFERENCES user NOT NULL,
+  PRIMARY KEY (usr_1, todo_id, usr_2)
+);
+
 
 INSERT INTO category VALUES ('Home', '#000080');--blue 
 INSERT INTO category VALUES ('Work', '#800000'); --brown 
@@ -140,14 +147,32 @@ INSERT INTO friends_with VALUES(
 'jonsnow'
 );
 
-INSERT INTO friends_with VALUES(
-'danny',
-'tyrion'
-);
-
-INSERT INTO friends_with VALUES(
-'tyrion',
+INSERT INTO shared_with VALUES(
+'jonsnow',
+1, 
 'danny'
 );
+
+
+INSERT INTO shared_with VALUES(
+'jonsnow',
+2, 
+'danny'
+);
+
+INSERT INTO shared_with VALUES(
+'jonsnow',
+3, 
+'danny'
+);
+
+INSERT INTO shared_with VALUES(
+'tyrion',
+4, 
+'danny'
+);
+
+
+
 
 --sqlite data.db < data.sql

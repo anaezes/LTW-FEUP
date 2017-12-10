@@ -37,6 +37,19 @@ function addFriend($username, $friend) {
   ]);
 
   return $stmt->fetchAll();
+}
 
+function getSharedTodos($username) {
+	global $dbh;
+	$stmt = $dbh->prepare("SELECT * FROM shared_with, todo 
+		WHERE todo_id LIKE td_id
+		AND usr_username LIKE usr_1
+		AND usr_2 LIKE :username
+		GROUP BY todo_id");
+	$stmt->execute([
+		':username' => $username,
+	]);
+
+	return $stmt->fetchAll();
 }
 ?>
