@@ -55,7 +55,6 @@ function selectCat(event){
       else
        $('#'+x[i].id).hide();
    }
-
  }
 }
 

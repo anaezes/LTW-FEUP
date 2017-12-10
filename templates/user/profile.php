@@ -12,9 +12,9 @@
       </div>
 	  <div class="editButtons">
 		<ul>
-			<a href = "edit_profile.php">Edit</a>
-			<a href = "edit_profile.php">Change Password</a>
-			<a href = "index.php">Cancel</a>
+			<button class="buttonFriend" id="friendTodos" onclick="window.location.href='/edit_profile.php'"> Edit Profile </button>
+
+			<button class="buttonFriend" id="friendTodos" onclick="window.location.href='/index.php'"> Return </i> </button>
 		</ul>
 	  </div>
 </div>

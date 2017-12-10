@@ -40,10 +40,10 @@ body > header {
 }
 
 .categories ul{
- text-align: center;
- align-content: center;
- padding-left: 0%;
- margin-left: 0%;
+   text-align: center;
+   align-content: center;
+   padding-left: 0%;
+   margin-left: 0%;
 }
 
 .categories ul li {
@@ -73,8 +73,6 @@ body > header {
     color: white; 
 }
 
-
-
 .todo {
     position: relative;
     margin-top: 1%;
@@ -84,11 +82,52 @@ body > header {
 }
 
 #editProfile {
-      position: relative;
+  position: relative;
+  margin-top: 1%;
+  float: right;
+  width: 80%;
+  line-height: 8px;
+}
+
+.friends{
+    position: relative;
     margin-top: 1%;
     float: right;
     width: 80%;
-    line-height: 8px;
+    height: 200px;
+}
+
+.friends > ul{
+text-align: center;
+}
+.friends > ul > li{
+display: inline-block;
+margin-right: 10px;
+}
+
+.buttonFriend{
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.buttonFriend:hover{
+     background-color: #45a049;
+}
+
+.friend{
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.friend p {
+    text-align: center;
 }
 
 .todo div {
@@ -122,11 +161,11 @@ body > header {
 
 .todos:nth-child(n) input[type=checkbox] {
     /* Double-sized Checkboxes */
-  -ms-transform: scale(1.3); /* IE */
-  -moz-transform: scale(1.3); /* FF */
-  -webkit-transform: scale(1.3); /* Safari and Chrome */
-  -o-transform: scale(1.3); /* Opera */
- vertical-align: middle;
+    -ms-transform: scale(1.3); /* IE */
+    -moz-transform: scale(1.3); /* FF */
+    -webkit-transform: scale(1.3); /* Safari and Chrome */
+    -o-transform: scale(1.3); /* Opera */
+    vertical-align: middle;
 }
 
 
@@ -230,7 +269,7 @@ input[type=text], input[type=password], select {
 }
 
 .Buttons > ul > li:hover{
- background-color: #45a049;   
+   background-color: #45a049;   
 }
 
 /*Bottons in first page */
@@ -275,18 +314,18 @@ input[type=text], input[type=password], select {
 }
 
 .startButtons > ul > li:hover{ 
- background-color: #555555;
+   background-color: #555555;
 }
 
 /*image background */
 #bg {
- width: 100%; 
-    height: 100%; 
-    position: fixed; 
-    left: 0px; 
-    top: 0px; 
-    z-index: -1; 
-  opacity: 0.75;
+   width: 100%; 
+   height: 100%; 
+   position: fixed; 
+   left: 0px; 
+   top: 0px; 
+   z-index: -1; 
+   opacity: 0.75;
 }
 
 #bg .stretch {
@@ -302,13 +341,13 @@ input[type=text], input[type=password], select {
 }
 
 .form-1::before, .addtodo::before{
-   position: absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   content: "";
-   z-index: -1;
+ position: absolute;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ content: "";
+ z-index: -1;
 }
 
 .form-1{
@@ -370,7 +409,7 @@ input[type=text], input[type=password], select {
 }
 
 #dateofactivitylabel{
-   padding: 2%;
+ padding: 2%;
 }
 #dateofactivity {
     padding-left: 2%;
@@ -378,13 +417,13 @@ input[type=text], input[type=password], select {
 
 
 .regBottons{
- text-align: center; 
- margin-right: 40px;
+   text-align: center; 
+   margin-right: 40px;
 }
 
 .editButtons{
- text-align: right; 
- margin-right: 18%;
+   text-align: right; 
+   margin-right: 18%;
 }
 
 
@@ -463,7 +502,7 @@ input[type=text], input[type=password], select {
 /*page login */
 
 /* The Modal (background) */
-.modal {
+.modal, .modal2, .modal3, .modal4{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -472,13 +511,17 @@ input[type=text], input[type=password], select {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
+    max-height:200px; 
+}
+
+/* Modal Content */
+.modal-content, .modal-content3 {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -486,24 +529,61 @@ input[type=text], input[type=password], select {
     width: 30%;
     position: relative;
     text-align: left;
+    overflow-y: auto;
 }
 
-.modal-content .addCat .field {
+/* Modal Content */
+.modal-content3 {
+    max-height:400px; 
+}
+
+.modal-content .addCat .field, 
+.modal-content .addFriend .field,
+.modal-content .friendTodos .field
+{
     position: center; 
     width: 90%;
     display: inline-block;
+    height: 120px;
+    overflow-y: auto;
+}
+
+.modal-content3 > label 
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.modal-content3 .viewTodos 
+{
+    margin-top: 30px;
+}
+
+.modal-content3 .viewTodo 
+{
+    border: 1px solid lightgrey;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.modal-content3 .viewTodo p.name
+{
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /* The Close Button */
-.close {
+.close, .close2, .close3{
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus,
+.close2:hover, .close2:focus,
+.close3:hover, .close3:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -562,5 +642,47 @@ form .hint {
   visibility: hidden;
 }
 
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: Transparent;
+    border: none;
+    cursor: pointer;
+     border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover{
+    background-color: #3e8e41;
+}
 
 </style>
