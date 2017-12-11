@@ -19,6 +19,7 @@
                <p class="field">
                 <label for="category"> Name:  </label>
                 <input type="text" id="NewCat" name="NewCategory" required /> 
+                <span class="hint">First letter must be Uppercase. At least 2 characters.</span>
                 <label for="Color"> Color: &nbsp   </label>
                 <input name="Color" type="color"/>
                 <br>
