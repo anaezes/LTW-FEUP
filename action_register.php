@@ -27,16 +27,17 @@
 		if($file_size < 500000 && $file_type == 'image/png')
 		{
 			move_uploaded_file($file_tmp, $final_dest);
-			if(!createUser($username, $password, $name))
-			{
-				//Neste momento não faz nada dentro do if
+			if(!createUser($username, $password, $name)){
+				
 			}
+				
 		}
 		else
 		{
 			header('location:register_user.php');
 			exit();
 		}		
+			}
 	}
 	else
 	{

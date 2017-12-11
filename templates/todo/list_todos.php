@@ -27,7 +27,7 @@
 
        <ul>
         <li>
-         <form name="checkbox" action="action_check_todo.php" method="POST"> 
+         <form name="checkbox" action="javascript:void(0);" method="POST"> 
           <label> Done </label>
           <input type="checkbox"  id="check<?=$todo_id?>" name="check" value="check" onchange="changeCheck(event)" 
           <?php if($todo['td_check']) echo 'checked="checked"'; ?> 

@@ -44,7 +44,7 @@ function changeCheck(event) {
         JSON.parse(this.responseText);
         alert(this.responseText);
       } catch (e){
-      //do noting
+      //sucess - do noting
     }         
   }
 };
