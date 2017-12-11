@@ -28,8 +28,9 @@
 	
 	if($file_size < 500000 && $file_type == 'image/png') {
 		move_uploaded_file($file_tmp, $final_dest);
-		if(!createUser($username, $password, $name))
-			$_SESSION['error_messages'][] = "Error: register!";	
+		if(!createUser($username, $password, $name)){
+			//$_SESSION['error_messages'][] = "Error: register!";	
+		}
 	}
 	else {
 			header('location:register_user.php');

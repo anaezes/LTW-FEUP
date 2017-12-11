@@ -8,8 +8,9 @@ $td_date = $_POST['dateofactivity'];
 $description= $_POST['description'];
 $username = $_SESSION['username'];
 
-if(!createToDo($username, $category, $title, $description, $td_date))
-	$_SESSION['error_messages'][] = "Error: add todo!";
+if(!createToDo($username, $category, $title, $description, $td_date)){
+	//$_SESSION['error_messages'][] = "Error: add todo!";
+}
 
 header('location:index.php');
 exit();
