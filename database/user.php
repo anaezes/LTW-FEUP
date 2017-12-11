@@ -32,12 +32,12 @@ function createUser($username, $password, $name)
 	try
 	{
 		$stmt = $dbh->prepare('INSERT INTO user VALUES(:user, :pass, :name)');
-		$stmt->execute([
+		$status = $stmt->execute([
 			':user' => $username,
 			':pass' => password_hash($password, PASSWORD_DEFAULT, $options),
 			':name' => $name,
 		]);
-		return $stmt->fetch() !== false;
+		return $status;
 	}
 	catch(Exception $e)
 	{
@@ -50,12 +50,12 @@ function updateUser($username, $name)
 {
 	global $dbh;
 	$stmt = $dbh->prepare('UPDATE user SET usr_name = :name WHERE usr_username = :user');
-	$stmt->execute([
+	$status = $stmt->execute([
 		':user' => $username,
 		':name' => $name,
 	]);
 	
-	return $stmt->fetch() !== false;
+	return $status;
 }
 
 function updatePassUser($username, $password)
@@ -63,11 +63,11 @@ function updatePassUser($username, $password)
 	$options = ['cost' => 12];
 	global $dbh;
 	$stmt = $dbh->prepare('UPDATE user SET usr_password = :pass WHERE usr_username = :user');
-	$stmt->execute([
+	$status = $stmt->execute([
 		':user' => $username,
 		':pass' => password_hash($password, PASSWORD_DEFAULT, $options),
 	]);
-	return $stmt->fetch() !== false;
+	return $status;
 }
 
 function addFirstCategories($username) {
@@ -94,6 +94,6 @@ function addFirstCategories($username) {
 	$stmt = $dbh->prepare("INSERT INTO user_cat VALUES('Other', :username)");
 	$stmt->execute([':username' => $username]);
 
-	return $stmt->fetch() !== false;
+	return true;
 }
 ?>

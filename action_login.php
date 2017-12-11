@@ -12,9 +12,8 @@ if(isLoginCorrect($_POST['username'], $_POST['password']))
 	header('location:index.php');
 }
 else{
-	//$_SESSION['error_messages'][] = "Error: login";
+	$_SESSION['error_messages'][] = "Error: login";
 	header('location:login.php');
-		//dar print - falha login
 }
 
 exit();

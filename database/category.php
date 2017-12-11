@@ -21,12 +21,12 @@ function addCategory($username, $category, $color) {
   ]);
 
   $stmt = $dbh->prepare('INSERT INTO user_cat VALUES(:category, :username)');
-  $stmt->execute([
+  $status = $stmt->execute([
     ':username' => $username,
     ':category' => $category, 
   ]);
 
-  return $stmt->fetch() !== false;
+  return $status;
 
 }
 
@@ -51,7 +51,7 @@ function addFirstCategories($username) {
   $stmt = $dbh->prepare("INSERT INTO user_cat VALUES('Other', :username)");
   $stmt->execute([':username' => $username]);
 
-  return $stmt->fetch() !== false;
+  exit();
 }
 
 ?>
