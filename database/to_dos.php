@@ -55,6 +55,13 @@ function deleteToDo($username, $td_id) {
 		':td_id' => $td_id,
 		':username' => $username,
 	]);
+
+	$stmt = $dbh->prepare('DELETE FROM shared_with WHERE todo_id = :td_id AND usr_1 = :username');
+	$stmt->execute([
+		':td_id' => $td_id,
+		':username' => $username,
+	]);
+
 	return $stmt->fetch() !== false;
 }
 
