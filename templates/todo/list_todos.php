@@ -47,7 +47,7 @@
       </div>
     </li>
     <li> 
-      <a href="#" onclick="deleteTodo(event, <?=$todo_id?>)" > <i  class="fa fa-trash-o"></i> </a>
+      <a href="#" onclick="deleteTodo(event)"> <i  class="fa fa-trash-o" id="del<?=$todo_id?>"></i> </a>
     </li>
   </ul>
 
