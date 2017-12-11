@@ -33,13 +33,14 @@ window.onclick = function(event) {
 
 function selectCat(event){
 
+  if(window.location.pathname !== "/index.php"){
+    window.location.href = "index.php";
+  }
+
   // Give the parameter a variable name
   var cat = event.target.innerText;
   
   var x = document.getElementsByClassName("dynamic-content");
-
-  console.log(x);
-  console.log(x.length);
 
   if(cat == 'All'){
     for(var i = 0; i < x.length; i++)
@@ -72,5 +73,5 @@ function validateCat(event) {
   for (let i = 0; i < inputs.length; i++)
     if (inputs[i].classList.contains('invalid'))
      event.preventDefault();
-}
+ }
 
