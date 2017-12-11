@@ -18,12 +18,12 @@ function changeCheck(event) {
 
   let aux_id = (event.target.id).split(/(\d+)/);
   let todo_id = aux_id[1];
-  let value = 0;
+  let chkvalue = 0;
   if (event.target.checked)
-    value = 1;
+    chkvalue = 1;
 
   let http = new XMLHttpRequest();
-  let params = "todo_id=" + todo_id + "&" + "chkvalue=" + value ;
+  let params = "todo_id=" + todo_id + "&" + "chkvalue=" + chkvalue ;
   http.open("POST", "action_check_todo.php", true);
   http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   http.send(params);
@@ -32,7 +32,7 @@ function changeCheck(event) {
 
 
 function shareTodo(event, todo_id) {
-  
+
   if (confirm("Are you sure?")) {
     let friend = event.target.id;
     let request = new XMLHttpRequest();
