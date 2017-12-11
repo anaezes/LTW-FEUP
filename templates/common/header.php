@@ -22,3 +22,11 @@ if(!isset($_SESSION['username']))
 </head>
 
 <body>
+      <section id="messages">
+      <?php $errors = getErrorMessages();foreach ($errors as $error) { ?>
+      <article class="error">
+        <p><?=$error?></p>
+      </article>
+      <?php }
+      clearMessages(); ?>
+    </section>

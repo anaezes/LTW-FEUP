@@ -9,8 +9,8 @@ $td_date = $_POST['dateofactivity'];
 $description= $_POST['description'];
 $username = $_SESSION['username'];
 
-if(!updateToDo($username, $id_todo, $category, $title, $description, $td_date)) {
-}
+if(!updateToDo($username, $id_todo, $category, $title, $description, $td_date)) 
+	$_SESSION['error_messages'][] = "Error: edit todo!";
 
 header('location:index.php');
 exit();

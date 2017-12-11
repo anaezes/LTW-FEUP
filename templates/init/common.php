@@ -11,3 +11,15 @@
 
 	<body>
 		<img src="images/background2.jpg" id="bg" class="stretch" alt="">
+		<section id="messages">
+			<?php $errors = getErrorMessages();
+			foreach ($errors as $error) { ?>
+				<article class="error">
+					<?php
+					echo "<script type='text/javascript'>alert('$error');</script>";
+					?> 
+				</article>
+				<?php } 
+				clearMessages(); 
+				?>
+			</section>
