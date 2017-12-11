@@ -25,7 +25,7 @@ if(!isset($_SESSION['username']))
       <section id="messages">
       <?php $errors = getErrorMessages();foreach ($errors as $error) { ?>
       <article class="error">
-        <p><?=$error?></p>
+        <?php echo '<script type="text/javascript">alert("' . $msg . '")</script>'; ?>
       </article>
       <?php }
       clearMessages(); ?>
