@@ -516,6 +516,27 @@ input[type=text], input[type=password], select {
 }
 
 /* Modal Content */
+.addCat .hint {
+ position:relative;
+  bottom: 10px;
+}
+
+label[for=Color]
+{
+  position:relative;
+  bottom: -18px;
+  right: 230px;
+
+}
+
+.addCat #Col
+{
+  position:relative;
+  bottom: -18px;
+  right: 230px;
+
+}
+
 .modal-content {
     max-height:200px; 
 }
