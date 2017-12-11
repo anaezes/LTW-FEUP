@@ -5,11 +5,16 @@ include_once('database/friends.php');
 
 $todo_id = $_POST['todo_id'];
 $friend = $_POST['friend'];
-if(!shareTodo($_SESSION['username'], $todo_id, $friend)) {
-	echo "JÁ PARTILHADO";
+
+try{
+	shareTodo($_SESSION['username'], $todo_id, $friend);
+	$msg = "Shared!";
+	echo json_encode($msg);
+} catch(Exception $e){
+	$msg = "Already shared! ";
+	echo json_encode($msg);
 }
 
-header('location:index.php');
 exit();
 
 ?>

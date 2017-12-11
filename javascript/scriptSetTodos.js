@@ -5,12 +5,24 @@ function deleteTodo(event) {
     let aux_id = (event.target.id).split(/(\d+)/);
     let todo_id = aux_id[1];
 
-    let http = new XMLHttpRequest();
+    let request = new XMLHttpRequest();
     let params = "todo_id=" + todo_id;
-    http.open("POST", "action_delete_todo.php", true);
-    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    http.send(params);
-    $("#todos").load(location.href+" #todos>*",""); 
+    request.open("POST", "action_delete_todo.php", true);
+
+    request.onreadystatechange = function(){
+      if (request.readyState == 4 && request.status == 200){
+        try {
+          JSON.parse(this.responseText);
+          alert(this.responseText);
+        } catch (e) {
+        console.log("Error: Json parse " + e);
+    }         
+  }
+};
+
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+request.send(params);
+$("#todos").load(location.href+" #todos>*",""); 
   }
 }
 
@@ -22,12 +34,24 @@ function changeCheck(event) {
   if (event.target.checked)
     chkvalue = 1;
 
-  let http = new XMLHttpRequest();
+  let request = new XMLHttpRequest();
   let params = "todo_id=" + todo_id + "&" + "chkvalue=" + chkvalue ;
-  http.open("POST", "action_check_todo.php", true);
-  http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  http.send(params);
-  $("#todos").load(location.href+" #todos>*",""); 
+  request.open("POST", "action_check_todo.php", true);
+
+  request.onreadystatechange = function(){
+    if (request.readyState == 4 && request.status == 200){
+      try {
+        JSON.parse(this.responseText);
+        alert(this.responseText);
+      } catch (e){
+      //do noting
+    }         
+  }
+};
+
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+request.send(params);
+$("#todos").load(location.href+" #todos>*",""); 
 } 
 
 
@@ -38,7 +62,19 @@ function shareTodo(event, todo_id) {
     let request = new XMLHttpRequest();
     let params = "todo_id=" + todo_id + "&" + "friend=" + friend;
     request.open("POST", "action_share_todo.php", true);
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.send(params);
-  }
+
+    request.onreadystatechange = function(){
+      if (request.readyState == 4 && request.status == 200){
+        try { //error
+          JSON.parse(this.responseText);
+          alert(this.responseText);
+        } catch (e) {
+         console.log("Error: Json parse " + e);
+       }         
+     }
+   };
+
+   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+   request.send(params);
+ }
 }

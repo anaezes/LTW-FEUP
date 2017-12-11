@@ -2,14 +2,15 @@
 include_once('includes/init.php');
 include_once('database/to_dos.php');
 
+$value = $_POST['chkvalue'];
+$todo_id = $_POST['todo_id'];
 
-    $value = $_POST['chkvalue'];
-    $todo_id = $_POST['todo_id'];
-
-if(!changeCheckTodo($_SESSION['username'], $todo_id, $value)) {
+try{
+	changeCheckTodo($_SESSION['username'], $todo_id, $value);
+} catch(Exception $e){
+	echo json_encode($e);
 }
 
-header('location:index.php');
 exit();
 
 ?>

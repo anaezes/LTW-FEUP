@@ -55,7 +55,7 @@ function getSharedTodos($username) {
 
 function shareTodo($username, $todo_id, $friend) {
 	global $dbh;
-	$stmt = $dbh->prepare('INSERT OR IGNORE INTO shared_with VALUES(:username, :todo_id, :friend)');
+	$stmt = $dbh->prepare('INSERT INTO shared_with VALUES(:username, :todo_id, :friend)');
 	$stmt->execute([
 		':username' => $username,
 		':todo_id' => $todo_id,
