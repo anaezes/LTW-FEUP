@@ -30,7 +30,7 @@
 					</p>
 					<p class="field">
 						<label for="iphoto"> Choose Photo: </label>
-						<input type="file" id="iphoto" name="photo"/>
+						<input type="file" id="iphoto" name="photo" required/>
 						<br>
 						<br>
 					</p>
