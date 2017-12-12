@@ -11,10 +11,7 @@
 
        <div class="viewFriends">
         <a href="friends.php"> Friends </i></a> 
-      </div>
-
-      <div class="setuser"> 
-        <a href="action_logout.php" >Log Out</a> 
+        <a href="action_logout.php" >Log Out</a>
       </div>
      
   </div>

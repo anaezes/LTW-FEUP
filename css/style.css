@@ -1,12 +1,12 @@
 
 body {
-    background-color: #F8F8FF;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  background-color: #F8F8FF;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
 body > header {
-    background-color: #F8F8FF;
-    padding: 1em;
+  background-color: #F8F8FF;
+  padding: 1em;
 }
 
 .info > img{
@@ -14,71 +14,77 @@ body > header {
 }
 
 .lateral .user{
-    text-align: center;
-    margin: 4% 0% 0% 6% ;
-    padding-top: 10%;
-    border-top: 2px solid #696969;
-    color: #696969;
+  text-align: center;
+  margin: 4% 0% 0% 6% ;
+  padding-top: 10%;
+  border-top: 2px solid #696969;
+  color: #696969;
 }
 
 .lateral .user a{
-    text-decoration: none;
-    color: #696969;
-    font-weight: bold;
+  text-decoration: none;
+  color: #696969;
+  font-weight: bold;
 }
 
 .user{
-    padding-bottom: 20%;
+  padding-bottom: 10%;
 }
 
-.categories h2{
+.user .viewFriends{
+  display: inline-block;
+}
+.user .viewFriends a + a:before{
+  content: " | ";
+  padding: 0 10px; 
+  font-weight: bold;
+}
+
+  .categories h2{
     display: none;
-}
+  }
 
-.lateral {
+  .lateral {
     width: 13%; 
-    height: 100%;
+    height: 80%;
     background-color: #F8F8FF;
     position: absolute;
     margin-top: 1%;
-}
+  }
 
-.categories ul{
+  .categories ul{
    padding-left: 0%;
    margin-left: 0%;
-}
+ }
 
-.categories ul li {
-    list-style: none;
-    display: block;
+ .categories ul li {
+  list-style: none;
+  display: block;
 }
 
 .categories > ul > li > button, #AddCatBtn, #CatBtn{
-    background-color: #F8F8FF;
-    color:  #696969;
-    display: block; 
-    text-decoration: none; 
-    border: none; 
-    text-align: center;
-    font-size: 16px;
-    width: 100%;
-
-    padding: 15px 32px;
+  background-color: #F8F8FF;
+  color:  #696969;
+  display: block; 
+  text-decoration: none; 
+  border: none; 
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  padding: 15px 32px;
 }
-
-
 
 
 #AddCatBtn:hover, #CatBtn:hover, .categories > button:hover {
-    background-color: #ccc; 
+  background-color: #ccc; 
 }
 
 .todo {
-    position: relative;
-    margin-top: 1%;
-    float: right;
-    width: 80%;
-    line-height: 8px;
+  position: relative;
+  margin-top: 1%;
+  float: right;
+  width: 80%;
+  line-height: 8px;
 }
 
 #editProfile {
@@ -90,68 +96,68 @@ body > header {
 }
 
 .friends{
-    position: relative;
-    margin-top: 1%;
-    float: right;
-    width: 80%;
-    height: 200px;
+  position: relative;
+  margin-top: 1%;
+  float: right;
+  width: 80%;
+  height: 200px;
 }
 
 .friends > ul{
-text-align: center;
+  text-align: center;
 }
 .friends > ul > li{
-display: inline-block;
-margin-right: 10px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .buttonFriend{
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
 }
 .buttonFriend:hover{
-     background-color: #45a049;
+ background-color: #45a049;
 }
 
 .friend{
-    display: inline-block;
-    margin-right: 2%;
+  display: inline-block;
+  margin-right: 2%;
 }
 
 .friend p {
-    text-align: center;
+  text-align: center;
 }
 
 .todo div {
-    border-radius: 5px;
-    width: 90%;
+  border-radius: 5px;
+  width: 90%;
 }
 
 .todos {
-    align-content: left;
-    width: 87%;
+  align-content: left;
+  width: 87%;
 }
 
 
 .todos > article:nth-child(n){
-    border-radius: 5px;
-    border: 1px solid #c8c8ce;
-    padding-left: 2%;
-    margin-bottom: 0.5%;
-    height: 145px; 
-    width: 100%;
+  border-radius: 5px;
+  border: 1px solid #c8c8ce;
+  padding-left: 2%;
+  margin-bottom: 0.5%;
+  height: 145px; 
+  width: 100%;
 }
 .todos:nth-child(n) .name {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .todos:nth-child(n) label {
@@ -160,12 +166,12 @@ margin-right: 10px;
 }
 
 .todos:nth-child(n) input[type=checkbox] {
-    /* Double-sized Checkboxes */
-    -ms-transform: scale(1.3); /* IE */
-    -moz-transform: scale(1.3); /* FF */
-    -webkit-transform: scale(1.3); /* Safari and Chrome */
-    -o-transform: scale(1.3); /* Opera */
-    vertical-align: middle;
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.3); /* IE */
+  -moz-transform: scale(1.3); /* FF */
+  -webkit-transform: scale(1.3); /* Safari and Chrome */
+  -o-transform: scale(1.3); /* Opera */
+  vertical-align: middle;
 }
 
 
@@ -184,26 +190,26 @@ margin-right: 10px;
 }
 
 .todos ul li{
-    display: inline-block;
-    padding-right: 5%;
+  display: inline-block;
+  padding-right: 5%;
 }
 
 .todo .add a {
-    text-decoration:none;
-    color: white;
-    font-weight: bold;
+  text-decoration:none;
+  color: white;
+  font-weight: bold;
 }
 
 .todo .add {
-    width: 87.5%;
-    background-color: #45a049; 
-    border: none;
-    padding: 1.5% 2.5%;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    display: block;  
-    margin-bottom: 10px;
+  width: 87.5%;
+  background-color: #45a049; 
+  border: none;
+  padding: 1.5% 2.5%;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  display: block;  
+  margin-bottom: 10px;
 }
 .todo .add:hover{
   background-color: #4CAF50;
@@ -211,35 +217,35 @@ margin-right: 10px;
 
 
 textarea {
-    width: 80%;
-    height: 100px;
-    resize: none;
+  width: 80%;
+  height: 100px;
+  resize: none;
 }
 
 input[type=text], input[type=password], select {
-    width: 80%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /*botton submit*/
 .Buttons input[type=submit] {
-    width: 80%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  width: 80%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .Buttons input[type=submit]:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 .Buttons > ul {
@@ -251,34 +257,34 @@ input[type=text], input[type=password], select {
 }
 
 .Buttons > ul > li a {
-    text-decoration:none;
-    color:white;
+  text-decoration:none;
+  color:white;
 }
 
 .Buttons > ul > li {
-    display: inline-block;
-    width: 80%;
-    background-color: #555555;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer; 
-    
+  display: inline-block;
+  width: 80%;
+  background-color: #555555;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; 
+
 }
 
 .Buttons > ul > li:hover{
-   background-color: #45a049;   
+ background-color: #45a049;   
 }
 
 /*Bottons in first page */
 .startButtons {
-    top:10%;
-    right:20%;
-    text-align: center;
-    position:absolute;
-    width:100%;
+  top:10%;
+  right:20%;
+  text-align: center;
+  position:absolute;
+  width:100%;
 
 }
 
@@ -292,52 +298,52 @@ input[type=text], input[type=password], select {
 }
 
 .startButtons > ul > li a {
-    font-size: 20px;
-    text-decoration:none;
-    color:white;
+  font-size: 20px;
+  text-decoration:none;
+  color:white;
 }
 
 .startButtons > ul > li { 
-    width: 100px;
-    background-color: #45a049;  
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;    
-    margin: 30px;
-    border-radius: 8px;  
-    box-shadow: 10px 10px 5px #555555;
+  width: 100px;
+  background-color: #45a049;  
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;    
+  margin: 30px;
+  border-radius: 8px;  
+  box-shadow: 10px 10px 5px #555555;
 
 }
 
 .startButtons > ul > li:hover{ 
-   background-color: #555555;
+ background-color: #555555;
 }
 
 /*image background */
 #bg {
-   width: 100%; 
-   height: 100%; 
-   position: fixed; 
-   left: 0px; 
-   top: 0px; 
-   z-index: -1; 
-   opacity: 0.75;
+ width: 100%; 
+ height: 100%; 
+ position: fixed; 
+ left: 0px; 
+ top: 0px; 
+ z-index: -1; 
+ opacity: 0.75;
 }
 
 #bg .stretch {
-    width:100%;
-    height:100%;
+  width:100%;
+  height:100%;
 }
 
 
 /*page register */
 
 .register{ 
-    text-align: center;
+  text-align: center;
 }
 
 .form-1::before, .addtodo::before{
@@ -351,123 +357,123 @@ input[type=text], input[type=password], select {
 }
 
 .form-1{
-    /* Size & position */
-    width: 450px;
-    margin: 8% auto 30px;
-    padding: 10px;
-    position: relative; /* For the submit button positioning */
-    color: white;
-    font-weight: bold;
+  /* Size & position */
+  width: 450px;
+  margin: 8% auto 30px;
+  padding: 10px;
+  position: relative; /* For the submit button positioning */
+  color: white;
+  font-weight: bold;
 
-    /* Styles */
-    box-shadow: 
-    0 0 1px rgba(0, 0, 0, 0.3), 
-    0 3px 7px rgba(0, 0, 0, 0.3), 
-    inset 0 1px rgba(0,0,0,0.3),
-    inset 0 -3px 2px rgba(0,0,0,0.25);
-    border-radius: 5px;
-    background-color: rgba(109, 109, 109, 0.8);
+  /* Styles */
+  box-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.3), 
+  0 3px 7px rgba(0, 0, 0, 0.3), 
+  inset 0 1px rgba(0,0,0,0.3),
+  inset 0 -3px 2px rgba(0,0,0,0.25);
+  border-radius: 5px;
+  background-color: rgba(109, 109, 109, 0.8);
 }
 
 .form-1 .field {
-    position: center; 
-    width: 550px;
+  position: center; 
+  width: 550px;
 }
 
 .addtodo{
-    /* Size & position */
-    width: 70%;
-    height: 475px;
-    position: relative; 
-    color: white;
-    font-weight: bold;
+  /* Size & position */
+  width: 70%;
+  height: 475px;
+  position: relative; 
+  color: white;
+  font-weight: bold;
 
-    /* Styles */
-    box-shadow: 
-    0 0 1px rgba(0, 0, 0, 0.3), 
-    0 3px 7px rgba(0, 0, 0, 0.3), 
-    inset 0 1px rgba(0,0,0,0.3),
-    inset 0 -3px 2px rgba(0,0,0,0.25);
-    border-radius: 5px;
-    background-color: rgba(109, 109, 109, 0.8);
+  /* Styles */
+  box-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.3), 
+  0 3px 7px rgba(0, 0, 0, 0.3), 
+  inset 0 1px rgba(0,0,0,0.3),
+  inset 0 -3px 2px rgba(0,0,0,0.25);
+  border-radius: 5px;
+  background-color: rgba(109, 109, 109, 0.8);
 }
 
 .addtodo .field:first-child {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 
 .addtodo .field {
-    padding-left: 2%;
-    position: center; 
-    width: 120%;
+  padding-left: 2%;
+  position: center; 
+  width: 120%;
 }
 
 .addtodo  .description{
-    padding-left: 2%;
-    padding-right: 2%;
-    width: 118%;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 118%;
 }
 
 #dateofactivitylabel{
  padding: 2%;
 }
 #dateofactivity {
-    padding-left: 2%;
+  padding-left: 2%;
 }
 
 
 .regBottons{
-   text-align: center; 
-   margin-right: 40px;
+ text-align: center; 
+ margin-right: 40px;
 }
 
 .editButtons{
-   text-align: right; 
-   margin-right: 18%;
+ text-align: right; 
+ margin-right: 18%;
 }
 
 
 .addToDoBottons ul {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 .regBottons input[type=submit], .regBottons input[type=reset],
 .addToDoBottons input[type=submit], input[type=reset] {
-    width: 40%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 1.8% 2%;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 10px 10px 5px #555555;
-    cursor: pointer;  
+  width: 40%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 1.8% 2%;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 10px 10px 5px #555555;
+  cursor: pointer;  
 }
 
 .editButtons input[type=submit], .editButtons input[type=reset] 
 {
-    width: 20%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 1.8% 2%;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 10px 10px 5px #555555;
-    cursor: pointer;  
-    margin-left: 2%;
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 1.8% 2%;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 10px 10px 5px #555555;
+  cursor: pointer;  
+  margin-left: 2%;
 }
 
 .regBottons input[type=submit]:hover, input[type=reset]:hover,
 .addToDoBottons input[type=submit]:hover, input[type=reset]:hover,
 .editButtons input[type=submit]:hover, input[type=reset]:hover
 {
-    background-color: #555555;
+  background-color: #555555;
 }
 
 .regBottons > ul, .addToDoBottons > ul {
-    text-decoration:none;
-    color:white;
-    display: block;
-    position: center; 
+  text-decoration:none;
+  color:white;
+  display: block;
+  position: center; 
 }
 
 .regBottons input[type=file], .addToDoBottons input[type=file] {
@@ -489,13 +495,13 @@ input[type=text], input[type=password], select {
 
 /*page Add to Do*/
 .addToDoBottons input[type=submit], input[type=reset] {
-    width: 20%;
-    margin-top: 20px;
-    margin-right:30px;
+  width: 20%;
+  margin-top: 20px;
+  margin-right:30px;
 }
 
 .addToDoBottons{
-    text-align: right;
+  text-align: right;
 }
 
 
@@ -503,22 +509,22 @@ input[type=text], input[type=password], select {
 
 /* The Modal (background) */
 .modal, .modal2, .modal3, .modal4{
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .addCat .hint {
  position:relative;
-  bottom: 10px;
+ bottom: 10px;
 }
 
 label[for=Color]
@@ -538,77 +544,77 @@ label[for=Color]
 }
 
 .modal-content {
-    max-height:200px; 
+  max-height:200px; 
 }
 
 /* Modal Content */
 .modal-content, .modal-content3 {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 30%;
-    position: relative;
-    text-align: left;
-    overflow-y: auto;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  position: relative;
+  text-align: left;
+  overflow-y: auto;
 }
 
 /* Modal Content */
 .modal-content3 {
-    max-height:400px; 
+  max-height:400px; 
 }
 
 .modal-content .addCat .field, 
 .modal-content .addFriend .field,
 .modal-content .friendTodos .field
 {
-    position: center; 
-    width: 90%;
-    display: inline-block;
-    height: 120px;
-    overflow-y: auto;
+  position: center; 
+  width: 90%;
+  display: inline-block;
+  height: 120px;
+  overflow-y: auto;
 }
 
 .modal-content > label,
 .modal-content3 > label
 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #4caf50;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4caf50;
 }
 
 .modal-content3 .viewTodos 
 {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .modal-content3 .viewTodo 
 {
-    border: 1px solid lightgrey;
-    margin-bottom: 10px;
-    padding-left: 5px;
+  border: 1px solid lightgrey;
+  margin-bottom: 10px;
+  padding-left: 5px;
 }
 
 .modal-content3 .viewTodo p.name
 {
-    font-size: 16px;
-    font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* The Close Button */
 .close, .close2, .close3{
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover, .close:focus,
 .close2:hover, .close2:focus,
 .close3:hover, .close3:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 form input.invalid {
@@ -637,67 +643,74 @@ form .hint {
   visibility: hidden;
 }
 
+.delBtn{
+  background-color: Transparent;
+  border: none;
+  font-size: 16px;
+}
+
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropbtn {
-    background-color: Transparent;
-    border: none;
-    cursor: pointer;
-     border: none;
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+  border: none;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    text-align: left;
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: left;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1
+  background-color: #f1f1f1
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .dropdown:hover{
-    background-color: #3e8e41;
+  background-color: #3e8e41;
 }
 
 .profile {
-    position: relative;
-    margin-top: 1%;
-    float: right;
-    width: 40%;
-    line-height: 8px;
-    background-color: #f1f1f1;
-    padding-left: 25px;
-    margin-right: 40%;
+  position: relative;
+  margin-top: 1%;
+  float: right;
+  width: 40%;
+  line-height: 8px;
+  background-color: #f1f1f1;
+  padding-left: 25px;
+  margin-right: 40%;
 }
 
 .profile > h1{
-    color: #3e8e41;
-    margin-bottom: 20px;
+  color: #3e8e41;
+  margin-bottom: 20px;
 }
 
 .profile > ul > li{
-display: inline-block;
+  display: inline-block;
 }
+
 
 </style>
