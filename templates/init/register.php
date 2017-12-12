@@ -17,8 +17,8 @@
 						<br>
 					</p>
 				    <p class="field">
-						<label for="ipass"> Repeat Password: </label>
-						<input type="password" id="ipass" name="passwordr" required />
+						<label for="ipass2"> Repeat Password: </label>
+						<input type="password" id="ipass2" name="passwordr" required />
 						<br>
 						<br>
 					</p>
