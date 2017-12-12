@@ -19,7 +19,7 @@ function validateTitle() {
 }
 
 function validateTextArea() {
-  if (/^[a-zA-Z0-9._-]+( [a-zA-Z0-9._-]+)*$/.test(this.value)){
+  if (/^[a-zA-Z0-9._-]+([ a-zA-Z0-9._-\s\S]+)*$/.test(this.value)){
     this.classList.remove('invalid');
   }
   else
