@@ -6,7 +6,7 @@
       <p class="field">
         <label for="name"> New name: </label>
         <input type="text" id="name" name="thename" required />
-        <span class="hint">Only lowercase, at least 3 characters</span>
+        <span class="hint">Symbols are not allowed.</span>
         <br>
         <br>
       </p>
