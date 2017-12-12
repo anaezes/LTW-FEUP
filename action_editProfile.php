@@ -17,6 +17,7 @@
 	
 	$errorEmpty = false;
 	$errorEmail = false;
+	$errorMessage = false;
 
 	//alterar só pass : se nome==vazio && cpassword!=vazio && npassword!=vazio && npasswordr!=vazio && $file_name=vazio
 	if (empty($name) && !empty($cpassword) && !empty($npassword) && !empty($npasswordr) && isLoginCorrect($username, $cpassword) && empty($file_name) )
@@ -82,6 +83,7 @@
 	else {
 		header('location:edit_profile.php');
 		$errorEmpty = true;
+		$_SESSION['error_messages'][] = "Error: Invalid Credentials";
 		exit();
 	}
 
