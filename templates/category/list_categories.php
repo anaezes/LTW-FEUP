@@ -5,12 +5,9 @@
     <h2>Categories</h2>
     <ul>
       <li>
-        <!-- Trigger/Open The Modal -->
         <button id="AddCatBtn"><i class="fa fa-plus" aria-hidden="true"></i>
         </button>
-        <!-- The Modal -->
         <div id="myModal" class="modal">
-          <!-- Modal content -->
           <div class="modal-content">
             <span class="close">&times;</span>
             <label> Add Category </label>
@@ -31,17 +28,12 @@
              </div>
            </form>
          </div>
-
        </div>
-
      </div>
-
    </li>
-
    <li> 
     <button id="CatBtn" onclick="selectCat(event)">All</button>
   </li>
-
 
   <?php foreach ($categories as $category) { 
     $cat_color = $category['cat_color'];
@@ -49,14 +41,14 @@
     ?>
 
     <li>
-      <a href="#" onclick="selectCat(event)"
+      <button onclick="selectCat(event)"
       style="color:<?php echo $cat_color?>;"
       onmouseover='this.style.background="<?php echo $cat_color?>",
       this.style.color="white" ' 
       onmouseout='this.style.background="#F8F8FF",
       this.style.color="<?php echo $cat_color?>" '>
       <?=$cat_name?> 
-    </a>
+    </button>
   </li>
   <?php } ?>
 

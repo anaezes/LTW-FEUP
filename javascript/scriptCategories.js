@@ -33,36 +33,30 @@ window.onclick = function(event) {
 
 function selectCat(event){
 
-  if(window.location.pathname !== "/index.php"){
+  if(window.location.pathname !== "/index.php")
     window.location.href = "index.php";
-  }
-
-  // Give the parameter a variable name
-  var cat = event.target.innerText;
   
-  var x = document.getElementsByClassName("dynamic-content");
+  // Give the parameter a variable name
+  let cat = event.target.innerText;
+  
+  let x = document.getElementsByClassName("dynamic-content");
 
-  if(cat == 'All'){
+  if(cat == 'All')
     for(var i = 0; i < x.length; i++)
-    {
-      console.log(x[i].id);
       $('#'+x[i].id).show();
-    }
-  }
-  else {
-    for(var i = 0; i < x.length; i++){
-      if ((x[i].id).indexOf(cat) !== -1)
-        $('#'+x[i].id).show();
-      else
-       $('#'+x[i].id).hide();
+    else {
+      for(var i = 0; i < x.length; i++){
+        if ((x[i].id).indexOf(cat) !== -1)
+          $('#'+x[i].id).show();
+        else
+          $('#'+x[i].id).hide();
+     }
    }
  }
-}
 
-function validateCategory() {
-  if (/^[A-Z][A-Za-z0-9_-]{1,19}$/.test(this.value)){
+ function validateCategory() {
+  if (/^[A-Z][A-Za-z0-9_-]{1,19}$/.test(this.value))
     this.classList.remove('invalid');
-  }
   else
     this.classList.add('invalid');
 }
