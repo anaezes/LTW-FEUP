@@ -10,11 +10,11 @@ let register = document.querySelector('#editProfile form');
 register.addEventListener('submit', validateRegister, false);
 
 function validateUsername() {
-  if (!/^[a-z]{3,}$/.test(this.value)){
-    this.classList.add('invalid');
+  if (/^\w+( +\w+)*$/.test(this.value)){
+    this.classList.remove('invalid');
   }
   else
-    this.classList.remove('invalid');
+    this.classList.add('invalid');
 }
 
 function validatePassword(other) {
