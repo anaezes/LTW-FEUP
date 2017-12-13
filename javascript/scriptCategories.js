@@ -33,8 +33,8 @@ window.onclick = function(event) {
 
 function selectCat(event){
 
-  if(window.location.pathname !== "/index.php")
-    window.location.href = "index.php";
+  if(("/index.php").indexOf(window.location.pathname) !== -1)
+    window.location.href = "./index.php";
   
   // Give the parameter a variable name
   let cat = event.target.innerText;

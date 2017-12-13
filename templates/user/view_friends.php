@@ -74,7 +74,7 @@
  						</div>
  					</div>
  					<li>
- 						<button class="buttonFriend" id="friendTodos" onclick="window.location.href='/index.php'"> Return </i>
+ 						<button class="buttonFriend" id="friendTodos" onclick="window.location.href='./index.php'"> Return </i>
  						</button>
  					</li>
  				</ul>

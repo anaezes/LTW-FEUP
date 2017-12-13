@@ -15,9 +15,9 @@
 	<div class="editButtons">
 
 		<ul>
-			<button class="buttonFriend" id="friendTodos" onclick="window.location.href='/edit_profile.php'"> Edit Profile </button>
+			<button class="buttonFriend" id="friendTodos" onclick="window.location.href='./edit_profile.php'"> Edit Profile </button>
 
-			<button class="buttonFriend" id="friendTodos" onclick="window.location.href='/index.php'"> Return </i> </button>
+			<button class="buttonFriend" id="friendTodos" onclick="window.location.href='./index.php'"> Return </i> </button>
 		</ul>
 	</div>
 </div>

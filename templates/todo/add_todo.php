@@ -38,7 +38,7 @@
             <ul>
               <input type = "submit" value="Add"/>
               <input type = "reset" value="Cancel" 
-              onclick="window.location='index.php';return false;" />
+              onclick="window.location='./index.php';return false;" />
             </ul>
           </div>
         </p>
