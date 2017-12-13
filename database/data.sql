@@ -50,8 +50,8 @@ INSERT INTO category VALUES ('Beauty', '#800080'); --purple
 INSERT INTO category VALUES ('Other', '#696969'); --grey 
 
 
---INSERT INTO user VALUES('jonsnow', 'jonsnow1#', 'Kit Harrigton');
---INSERT INTO user VALUES('danny', 'dannyTa1#', 'Emilia Clarke');
---INSERT INTO user VALUES('tyrion','tyrionLa1#', 'Peter Dinklage');
+--jonsnow, jonsnow1#
+--danny, dannyTa1#
+--tyrion, tyrionLa1#
 --arya, aryaStark1#
 --sansa, sansaStark1#
